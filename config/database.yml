@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: rails-bunnynb_production
-  username: rails-bunnynb
-  password: <%= ENV['RAILS-BUNNYNB_DATABASE_PASSWORD'] %>
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
