@@ -1,21 +1,26 @@
-<div class='text-center mb-4'>
-  <h1>All Bunnies</h1>
+<div id='bunnies-title'>
+  <h1>Meet your Bunnies</h1>
 </div>
 
-<div class="d-flex justify-content-center m-4">
+<div class='wrap-container'>
 
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <% @bunnies.each do |bunny|%>
-      <h2><%= bunny.name %></h2>
-      <p><%= bunny.price_per_day %> Euros</p>
-      <p><%= link_to 'en savoir plus!', bunny_path(bunny), class: 'btn btn-secondary'%></p>
-      <% end %>
-    </div>
+  <div class='main-bunny'>
+    <% @bunnies.each do |bunny| %>
+      <div class="card-bunny m-2" style="width: 18rem;">
+        <div class="card-body-bunny text-center">
+          <%= cl_image_tag bunny.photo.key, width: 200, height: 150, crop: :fill %>
+          <h2 class="card-title-bunny"><%= bunny.name %></h2>
+          <p class="card-text-bunny"><%= bunny.skill %></p>
+          <p id="bunny-price"><%= bunny.price_per_day %>€</p>
+          <%= link_to 'en savoir plus', bunny_path(bunny), class: 'bunny-btn' %>
+        </div>
+      </div>
+    <% end %>
   </div>
 
   <div class='map'>
   </div>
+
 </div>
+
 
