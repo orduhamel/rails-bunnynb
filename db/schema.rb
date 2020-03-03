@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_143923) do
+ActiveRecord::Schema.define(version: 2020_03_03_095520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 2020_03_02_143923) do
     t.string "address"
     t.integer "price_per_day", default: 0
     t.string "fur"
-    t.string "personnality"
     t.string "skill"
     t.string "weight"
     t.string "size"
