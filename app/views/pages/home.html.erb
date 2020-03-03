@@ -1,6 +1,10 @@
   <div class='mainContainer d-flex flex-column justify-content-center align-items-center'>
     <h1 class='mt-4'>BunnynB</h1>
-    <div class='buttonContainer d-flex'>
-    <%= link_to 'louer un lapin', bunnies_path, class: 'btn btn-secondary' %>
+    <div class="description">
+      <p>La plateforme qui vous aide à trouver un compagnon</p>
+    </div>
+    <div class='buttonContainer'>
+    <%= link_to 'Rechercher un compagnon', bunnies_path, class: 'btn btn-secondary m-2 px-3' %>
+    <%= link_to 'Louer son compagnon', bunnies_path, class: 'btn btn-secondary m-2 px-3' %>
     </div>
   </div>
