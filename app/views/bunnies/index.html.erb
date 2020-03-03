@@ -10,6 +10,7 @@
       <% @bunnies.each do |bunny|%>
       <h2><%= bunny.name %></h2>
       <p><%= bunny.price_per_day %> Euros</p>
+      <p><%= link_to 'en savoir plus!', bunny_path(bunny), class: 'btn btn-secondary'%></p>
       <% end %>
     </div>
   </div>

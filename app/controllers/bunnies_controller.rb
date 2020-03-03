@@ -4,6 +4,7 @@ class BunniesController < ApplicationController
   end
 
   def show
+    @bunny = Bunny.find(params[:id])
   end
 
   def create
