@@ -7,28 +7,27 @@
   margin-top: -40px;
 }
 
-.btn {
-  font-size: 20px;
-  border-radius: 10px;
-  background-color: $green;
-
+.buttonContainer {
+  margin-left: 80px;
+  margin-top: 40px;
 }
 
-.buttonContainer{
-  margin-top: 130px;
-  margin-left: -750px;
-}
-
-h1 {
-  font-family: 'Satisfy', cursive;
-  font-size: 80px;
+#title-site {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 150px;
   color: white;
-  margin-left: -750px;
+  margin-left: 80px;
 }
 
-.description{
+.punchline{
   color: white;
   font-size: 20px;
-  margin-left: -750px;
   font-weight: lighter;
+  margin-left: 100px;
+  margin-bottom: 30px;
+}
+
+.buttonContainer .bunny-btn {
+  margin: 20px;
+  padding: 20px;
 }
