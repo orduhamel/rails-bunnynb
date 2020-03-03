@@ -12,61 +12,6 @@ puts "Done deleting all Users"
 
 puts "Implementing the Seeds..."
 
-# bunnies
-puts "Seeding 10 bunnies..."
-
-canelle_image = URI.open("https://images.unsplash.com/photo-1517750199383-5442eaf9e041?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
-canelle = Bunny.new(name: 'Canelle', description: 'Canelle aime le calme et les caresses. Elle n\'est pas compatible avec les chiens.', address: 'Nantes', price_per_day: 15, fur: 'fluffy', skill: 'calming', weight: 'light', size: 'medium', cleanliness: 4)
-canelle.photo.attach(io: canelle_image, filename: "#{canelle.name.downcase}.jpg", content_type: 'image/jpg')
-canelle.save!
-
-vanille_image = URI.open("https://images.reference.com/amg-cms-reference-images/prod/how-does-a-rabbit-move_5bb324e2-3f6a-4708-97ce-493e1816f510.jpg?width=760&height=411&fit=crop")
-vanille = Bunny.new(name: 'Vanille', description: 'Vanille est une lapine sportive. Elle aime les parcours d\'obstacles.', address: 'Saint-Herblain', price_per_day: 17, fur: 'soft', skill: 'acrobat', weight: 'normal', size: 'small', cleanliness: 5)
-vanille.photo.attach(io: vanille_image, filename: "#{vanille.name.downcase}.jpg", content_type: 'image/jpg')
-vanille.save!
-
-lexie_image = URI.open("https://i.pinimg.com/originals/48/de/3c/48de3cbe7c4ec4ff9b5dce708deee158.jpg")
-lexie = Bunny.new(name: 'Lexie', description: 'Lexie aime jouer et supporte très bien la compagnie des autres animaux.', address: 'Rezé', price_per_day: 17, fur: 'fluffy', skill: 'calming', weight: 'normal', size: 'dwarf', cleanliness: 4)
-lexie.photo.attach(io: lexie_image, filename: "#{lexie.name.downcase}.jpg", content_type: 'image/jpg')
-lexie.save!
-
-pistache_image = URI.open("https://media.istockphoto.com/photos/closeup-of-a-funny-rabbit-isolated-on-white-picture-id1069594594?k=6&m=1069594594&s=612x612&w=0&h=0kR2oyNKYwd1jXD6U5Ce5uzg81fHN8y50e6jUfT2BCE=")
-pistache = Bunny.new(name: 'Pistache', description: 'Pistache est un lapin qui aime faire la fête. Il est toujours partant pour aller boire un verre avec ses copains lapins', address: 'Nantes', price_per_day: 13, fur: 'rough', skill: 'partygoer', weight: 'normal', size: 'medium', cleanliness: 5)
-pistache.photo.attach(io: pistache_image, filename: "#{pistache.name.downcase}.jpg", content_type: 'image/jpg')
-pistache.save!
-
-arya_image = URI.open("https://squeaksandnibbles.com/wp-content/uploads/2018/02/netherland-dwarf-971x1024.jpg")
-arya = Bunny.new(name: 'Arya', description: 'Arya est très peureuse. Elle aime beacoup les calins.', address: 'Saint-Sebastien', price_per_day: 14, fur: 'soft', skill: 'cuddly', weight: 'light', size: 'dwarf', cleanliness: 3)
-arya.photo.attach(io: arya_image, filename: "#{arya.name.downcase}.jpg", content_type: 'image/jpg')
-arya.save!
-
-choco_image = URI.open("https://images.unsplash.com/photo-1533993962330-7e4e1e64b2e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80")
-choco = Bunny.new(name: 'Choco', description: 'Choco est un lapin qui aime plaire, il saura vous faire un charme.', address: 'Rezé', price_per_day: 16, fur: 'soft', skill: 'breeding', weight: 'heavy', size: 'large', cleanliness: 2)
-choco.photo.attach(io: choco_image, filename: "#{choco.name.downcase}.jpg", content_type: 'image/jpg')
-choco.save!
-
-coco_image = URI.open("https://upload.wikimedia.org/wikipedia/commons/7/73/British_Giant_rabbit_-_geograph.org.uk_-_163223.jpg")
-coco = Bunny.new(name: 'Coco', description: 'Coco a le caractère d\'un lapin et la taille d\'un chien, il vous permet d\'avoir un bon compromis.', address: 'Nantes', price_per_day: 12, fur: 'rough', skill: 'boxer', weight: 'enormous', size: 'giant', cleanliness: 5)
-coco.photo.attach(io: coco_image, filename: "#{coco.name.downcase}.jpg", content_type: 'image/jpg')
-coco.save!
-
-lulu_image = URI.open("https://images.unsplash.com/photo-1517108774990-66920c6f1847?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
-lulu = Bunny.new(name: 'Lulu', description: 'Lulu n\'apprécie par la compagnie des autres animaux, elle passe l\'essentiel de son temps à dormir.', address: 'Saint-Herblain', price_per_day: 15, fur: 'soft', skill: 'boxer', weight: 'light', size: 'small', cleanliness: 4)
-lulu.photo.attach(io: lulu_image, filename: "#{lulu.name.downcase}.jpg", content_type: 'image/jpg')
-lulu.save!
-
-paris_image = URI.open("https://images.unsplash.com/photo-1546555670-f68f7302f3a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80")
-paris = Bunny.new(name: 'Paris', description: 'Paris est un lapin voyageur, il vous accompagnera avec plaisir pendant vos vacances.', address: 'Saint-Sebastien', price_per_day: 16, fur: 'soft', skill: 'calming', weight: 'normal', size: 'medium', cleanliness: 3)
-paris.photo.attach(io: paris_image, filename: "#{paris.name.downcase}.jpg", content_type: 'image/jpg')
-paris.save!
-
-couscous_image = URI.open("https://images.unsplash.com/photo-1452857297128-d9c29adba80b?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80")
-couscous = Bunny.new(name: 'Couscous', description: 'Couscous aime manger et faire des câlins.', address: 'Nantes', price_per_day: 16 , fur: 'fluffy', skill: 'cuddly', weight: 'heavy', size: 'large', cleanliness: 4)
-couscous.photo.attach(io: couscous_image, filename: "#{couscous.name.downcase}.jpg", content_type: 'image/jpg')
-couscous.save!
-
-puts "Finished seeding 10 bunnies..."
-
 # owners
 puts "Seeding 5 owners..."
 
@@ -127,69 +72,102 @@ zoe.save!
 
 puts "Finished seeding 5 renters..."
 
-# lien entre les bunnies et les owners
+# bunnies
+puts "Seeding 10 bunnies..."
 
-puts "Linking each bunny with its owner..."
-
+canelle_image = URI.open("https://images.unsplash.com/photo-1517750199383-5442eaf9e041?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
+canelle = Bunny.new(name: 'Canelle', description: 'Canelle aime le calme et les caresses. Elle n\'est pas compatible avec les chiens.', address: 'Nantes', price_per_day: 15, fur: 'fluffy', skill: 'calming', weight: 'light', size: 'medium', cleanliness: 4)
+canelle.photo.attach(io: canelle_image, filename: "#{canelle.name.downcase}.jpg", content_type: 'image/jpg')
 canelle.user = melanie #owner
 canelle.save!
+
+vanille_image = URI.open("https://images.reference.com/amg-cms-reference-images/prod/how-does-a-rabbit-move_5bb324e2-3f6a-4708-97ce-493e1816f510.jpg?width=760&height=411&fit=crop")
+vanille = Bunny.new(name: 'Vanille', description: 'Vanille est une lapine sportive. Elle aime les parcours d\'obstacles.', address: 'Saint-Herblain', price_per_day: 17, fur: 'soft', skill: 'acrobat', weight: 'normal', size: 'small', cleanliness: 5)
+vanille.photo.attach(io: vanille_image, filename: "#{vanille.name.downcase}.jpg", content_type: 'image/jpg')
 vanille.user = melanie #owner
 vanille.save!
+
+lexie_image = URI.open("https://i.pinimg.com/originals/48/de/3c/48de3cbe7c4ec4ff9b5dce708deee158.jpg")
+lexie = Bunny.new(name: 'Lexie', description: 'Lexie aime jouer et supporte très bien la compagnie des autres animaux.', address: 'Rezé', price_per_day: 17, fur: 'fluffy', skill: 'calming', weight: 'normal', size: 'dwarf', cleanliness: 4)
+lexie.photo.attach(io: lexie_image, filename: "#{lexie.name.downcase}.jpg", content_type: 'image/jpg')
 lexie.user = melanie #owner
 lexie.save!
+
+pistache_image = URI.open("https://media.istockphoto.com/photos/closeup-of-a-funny-rabbit-isolated-on-white-picture-id1069594594?k=6&m=1069594594&s=612x612&w=0&h=0kR2oyNKYwd1jXD6U5Ce5uzg81fHN8y50e6jUfT2BCE=")
+pistache = Bunny.new(name: 'Pistache', description: 'Pistache est un lapin qui aime faire la fête. Il est toujours partant pour aller boire un verre avec ses copains lapins', address: 'Nantes', price_per_day: 13, fur: 'rough', skill: 'partygoer', weight: 'normal', size: 'medium', cleanliness: 5)
+pistache.photo.attach(io: pistache_image, filename: "#{pistache.name.downcase}.jpg", content_type: 'image/jpg')
 pistache.user = caroline #owner
 pistache.save!
+
+arya_image = URI.open("https://squeaksandnibbles.com/wp-content/uploads/2018/02/netherland-dwarf-971x1024.jpg")
+arya = Bunny.new(name: 'Arya', description: 'Arya est très peureuse. Elle aime beacoup les calins.', address: 'Saint-Sebastien', price_per_day: 14, fur: 'soft', skill: 'cuddly', weight: 'light', size: 'dwarf', cleanliness: 3)
+arya.photo.attach(io: arya_image, filename: "#{arya.name.downcase}.jpg", content_type: 'image/jpg')
 arya.user = mathieu #owner
 arya.save!
+
+choco_image = URI.open("https://images.unsplash.com/photo-1533993962330-7e4e1e64b2e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80")
+choco = Bunny.new(name: 'Choco', description: 'Choco est un lapin qui aime plaire, il saura vous faire un charme.', address: 'Rezé', price_per_day: 16, fur: 'soft', skill: 'breeding', weight: 'heavy', size: 'large', cleanliness: 2)
+choco.photo.attach(io: choco_image, filename: "#{choco.name.downcase}.jpg", content_type: 'image/jpg')
 choco.user = mathieu #owner
 choco.save!
+
+coco_image = URI.open("https://upload.wikimedia.org/wikipedia/commons/7/73/British_Giant_rabbit_-_geograph.org.uk_-_163223.jpg")
+coco = Bunny.new(name: 'Coco', description: 'Coco a le caractère d\'un lapin et la taille d\'un chien, il vous permet d\'avoir un bon compromis.', address: 'Nantes', price_per_day: 12, fur: 'rough', skill: 'boxer', weight: 'enormous', size: 'giant', cleanliness: 5)
+coco.photo.attach(io: coco_image, filename: "#{coco.name.downcase}.jpg", content_type: 'image/jpg')
 coco.user = arthur #owner
 coco.save!
+
+lulu_image = URI.open("https://images.unsplash.com/photo-1517108774990-66920c6f1847?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
+lulu = Bunny.new(name: 'Lulu', description: 'Lulu n\'apprécie par la compagnie des autres animaux, elle passe l\'essentiel de son temps à dormir.', address: 'Saint-Herblain', price_per_day: 15, fur: 'soft', skill: 'boxer', weight: 'light', size: 'small', cleanliness: 4)
+lulu.photo.attach(io: lulu_image, filename: "#{lulu.name.downcase}.jpg", content_type: 'image/jpg')
 lulu.user = brigitte #owner
 lulu.save!
+
+paris_image = URI.open("https://images.unsplash.com/photo-1546555670-f68f7302f3a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80")
+paris = Bunny.new(name: 'Paris', description: 'Paris est un lapin voyageur, il vous accompagnera avec plaisir pendant vos vacances.', address: 'Saint-Sebastien', price_per_day: 16, fur: 'soft', skill: 'calming', weight: 'normal', size: 'medium', cleanliness: 3)
+paris.photo.attach(io: paris_image, filename: "#{paris.name.downcase}.jpg", content_type: 'image/jpg')
 paris.user = arthur #owner
 paris.save!
+
+couscous_image = URI.open("https://images.unsplash.com/photo-1452857297128-d9c29adba80b?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80")
+couscous = Bunny.new(name: 'Couscous', description: 'Couscous aime manger et faire des câlins.', address: 'Nantes', price_per_day: 16 , fur: 'fluffy', skill: 'cuddly', weight: 'heavy', size: 'large', cleanliness: 4)
+couscous.photo.attach(io: couscous_image, filename: "#{couscous.name.downcase}.jpg", content_type: 'image/jpg')
 couscous.user = caroline #owner
 couscous.save!
 
-puts "Finished linking each bunny with its owner..."
+puts "Finished seeding 10 bunnies..."
 
 #bookings
 
 puts "Creating 5 bookings..."
 
-booking1 = Booking.create!(total_price: 30, status: 'pending', start_date: DateTime.new(2020,4,3), end_date: DateTime.new(2020,4,5)) # location de 2 jours
-booking2 = Booking.create!(total_price: 42, status: 'pending', start_date: DateTime.new(2020,3,20), end_date: DateTime.new(2020,3,23)) # location de 3 jours
-booking3 = Booking.create!(total_price: 13, status: 'pending', start_date: DateTime.new(2020,3,15), end_date: DateTime.new(2020,3,16)) # location 1 jour
-booking4 = Booking.create!(total_price: 24, status: 'pending', start_date: DateTime.new(2020,3,17), end_date: DateTime.new(2020,3,19)) # location de 2 jours
-booking5 = Booking.create!(total_price: 160, status: 'pending', start_date: DateTime.new(2020,4,10), end_date: DateTime.new(2020,4,20)) # location de 10 jours
-
-puts "Finished creating 5 bookings..."
-
-# lien entre les bunnies, les renters et les bookings
-puts "Linking each booking with a bunny and a renter..."
-
+booking1 = Booking.new(total_price: 30, status: 'pending', start_date: DateTime.new(2020,4,3), end_date: DateTime.new(2020,4,5)) # location de 2 jours
 booking1.bunny = canelle #bunny
 booking1.user = simon #renter
 booking1.save!
 
+booking2 = Booking.new(total_price: 42, status: 'pending', start_date: DateTime.new(2020,3,20), end_date: DateTime.new(2020,3,23)) # location de 3 jours
 booking2.bunny = arya #bunny
 booking2.user = sylvain #renter
 booking2.save!
 
+booking3 = Booking.new(total_price: 13, status: 'pending', start_date: DateTime.new(2020,3,15), end_date: DateTime.new(2020,3,16)) # location 1 jour
 booking3.bunny = pistache #bunny
 booking3.user = margaux #renter
 booking3.save!
 
+booking4 = Booking.new(total_price: 24, status: 'pending', start_date: DateTime.new(2020,3,17), end_date: DateTime.new(2020,3,19)) # location de 2 jours
 booking4.bunny = coco #bunny
 booking4.user = nino #renter
 booking4.save!
 
+booking5 = Booking.new(total_price: 160, status: 'pending', start_date: DateTime.new(2020,4,10), end_date: DateTime.new(2020,4,20)) # location de 10 jours
 booking5.bunny = paris #bunny
 booking5.user = zoe #renter
 booking5.save!
 
-puts "Finished linking each booking with a bunny and a renter..."
+puts "Finished creating 5 bookings..."
+
 puts "__________________________________________________________"
 puts "Finished Seeding!"
 
