@@ -1,0 +1,37 @@
+<div class="signin">
+  <div class="signin-image">
+<!--     <h2>BONJOUR</h2> -->
+  </div>
+  <div class="form-signin">
+    <div class="signin-titles">
+      <h2>Bunnynb</h2>
+      <p>Se connecter</p>
+    </div>
+    <div class="form">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email,
+                      required: false,
+                      autofocus: true,
+                      label: false,
+                      placeholder: 'Votre addresse email',
+                      input_html: { autocomplete: "email" } %>
+          <%= f.input :password,
+                      required: false,
+                      label: false,
+                      placeholder: 'Votre mot de passe',
+                      input_html: { autocomplete: "current-password" } %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Log in" %>
+        </div>
+      <% end %>
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
+
+
+
