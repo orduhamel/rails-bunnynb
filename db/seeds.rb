@@ -1,13 +1,13 @@
 require "open-uri"
 
 puts "Deleting all Bookings..."
-# Booking.destroy_all
+Booking.destroy_all
 puts "Done deleting all Bookings"
 puts "Deleting all Bunnies..."
-# Bunny.destroy_all
+Bunny.destroy_all
 puts "Done deleting all Bunnies"
 puts "Deleting all Users..."
-# User.destroy_all
+User.destroy_all
 puts "Done deleting all Users"
 
 puts "Implementing the Seeds..."
