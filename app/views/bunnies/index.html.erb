@@ -1,5 +1,5 @@
-<div id='bunnies-title'>
-  <h1>Meet your Bunnies</h1>
+<div class='text-center'>
+  <h1 id='bunnies-title'>Meet your Bunnies</h1>
 </div>
 
 <div class='wrap-container'>
@@ -8,7 +8,7 @@
     <% @bunnies.each do |bunny| %>
       <div class="card-bunny m-2" style="width: 18rem;">
         <div class="card-body-bunny text-center">
-          <%= cl_image_tag bunny.photo.key, width: 200, height: 150, crop: :fill %>
+          <%= cl_image_tag bunny.photo.key, class: "bunny-picture" %>
           <h2 class="card-title-bunny"><%= bunny.name %></h2>
           <p class="card-text-bunny"><%= bunny.skill %></p>
           <p id="bunny-price"><%= bunny.price_per_day %>€</p>
