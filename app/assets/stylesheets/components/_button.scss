@@ -1,0 +1,13 @@
+.bunny-btn {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $green;
+  transition: background 0.3s ease;
+}
+
+.bunny-btn:hover {
+  background: #1BCB7F;
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,68 @@
+.signin {
+  display: flex;
+  background-color: white;
+  height: 100vh;
+  border: solid 1px black;
+}
+
+.signin-image {
+  background-image: asset-url('rabbit-signin.jpeg');
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  text-align: center;
+  color: $white;
+}
+
+.signin-image h2 {
+  margin: auto;
+}
+
+.form-signin {
+  flex-grow: 1;
+}
+
+.signin-titles {
+  text-align: center;
+}
+
+.signin-titles h2 {
+  font-size: 32px;
+}
+
+.form {
+  // display: flex;
+  // flex-direction: column;
+  margin: 30px auto;
+  width: 400px;
+  padding: 30px;
+  border: solid 1px $grey;
+  box-shadow: 0px 2px 29px #C8C8C8;
+  font-size: 13px;
+}
+
+.form-inputs input {
+  background-color: white !important;
+}
+
+.form-actions {
+  border-radius: 4px;
+  width: 100px;
+  margin-bottom: 15px;
+  background: $green;
+  transition: background 0.3s ease;
+
+  .btn {
+    color: white !important;
+  }
+}
+
+.form-actions:hover {
+  background: #1BCB7F;
+  color: white;
+  text-decoration: none;
+}
+
+.form-check-label {
+  color: $black !important;
+}
