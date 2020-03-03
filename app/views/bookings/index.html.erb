@@ -1,0 +1,15 @@
+
+<h1>All your bookings</h1>
+
+<ul>
+  <div class="cols row-cols-sm-4 p-5 m-auto">
+   <% @bookings.each do |booking| %>
+      <div class="card m-3">
+        <li>
+          <%= booking.bunny.name %>
+        </li>
+      </div>
+    <% end %>
+  </div>
+</ul>
+
