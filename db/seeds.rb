@@ -75,11 +75,11 @@ puts "Finished seeding 5 renters..."
 # bunnies
 puts "Seeding 10 bunnies..."
 
-canelle_image = URI.open("https://images.unsplash.com/photo-1517750199383-5442eaf9e041?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
-canelle = Bunny.new(name: 'Canelle', description: 'Canelle aime le calme et les caresses. Elle n\'est pas compatible avec les chiens.', address: 'Nantes', price_per_day: 15, fur: 'fluffy', skill: 'calming', weight: 'light', size: 'medium', cleanliness: 4)
-canelle.photo.attach(io: canelle_image, filename: "#{canelle.name.downcase}.jpg", content_type: 'image/jpg')
-canelle.user = melanie #owner
-canelle.save!
+cannelle_image = URI.open("https://images.unsplash.com/photo-1517750199383-5442eaf9e041?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
+cannelle = Bunny.new(name: 'cannelle', description: 'cannelle aime le calme et les caresses. Elle n\'est pas compatible avec les chiens.', address: 'Nantes', price_per_day: 15, fur: 'fluffy', skill: 'calming', weight: 'light', size: 'medium', cleanliness: 4)
+cannelle.photo.attach(io: cannelle_image, filename: "#{cannelle.name.downcase}.jpg", content_type: 'image/jpg')
+cannelle.user = melanie #owner
+cannelle.save!
 
 vanille_image = URI.open("https://images.reference.com/amg-cms-reference-images/prod/how-does-a-rabbit-move_5bb324e2-3f6a-4708-97ce-493e1816f510.jpg?width=760&height=411&fit=crop")
 vanille = Bunny.new(name: 'Vanille', description: 'Vanille est une lapine sportive. Elle aime les parcours d\'obstacles.', address: 'Saint-Herblain', price_per_day: 17, fur: 'soft', skill: 'acrobat', weight: 'normal', size: 'small', cleanliness: 5)
@@ -142,7 +142,7 @@ puts "Finished seeding 10 bunnies..."
 puts "Creating 5 bookings..."
 
 booking1 = Booking.new(total_price: 30, status: 'pending', start_date: DateTime.new(2020,4,3), end_date: DateTime.new(2020,4,5)) # location de 2 jours
-booking1.bunny = canelle #bunny
+booking1.bunny = cannelle #bunny
 booking1.user = simon #renter
 booking1.save!
 
