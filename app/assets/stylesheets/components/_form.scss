@@ -1,5 +1,6 @@
 .signin {
   display: flex;
+  align-items: center;
   background-color: white;
   height: 100vh;
   border: solid 1px black;
@@ -12,6 +13,7 @@
   width: 50%;
   text-align: center;
   color: $white;
+  height: 100vh;
 }
 
 .signin-image h2 {
@@ -20,41 +22,34 @@
 
 .form-signin {
   flex-grow: 1;
+
 }
 
 .signin-titles {
   text-align: center;
-}
 
-.signin-titles h2 {
-  font-size: 32px;
+  h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 60px;
+    margin-bottom: 35px;
+  }
 }
 
 .form {
-  // display: flex;
-  // flex-direction: column;
   margin: 30px auto;
   width: 400px;
   padding: 30px;
   border: solid 1px $gray;
   box-shadow: 0px 2px 29px #C8C8C8;
   font-size: 13px;
+
+  .bunny-btn {
+    margin: 0 auto;
+  }
 }
 
 .form-inputs input {
   background-color: white !important;
-}
-
-.form-actions {
-  border-radius: 4px;
-  width: 100px;
-  margin-bottom: 15px;
-  background: $green;
-  transition: background 0.3s ease;
-
-  .btn {
-    color: white !important;
-  }
 }
 
 .form-actions:hover {
@@ -65,4 +60,8 @@
 
 .form-check-label {
   color: $black !important;
+}
+
+.devise-links {
+  margin-top: 30px;
 }
