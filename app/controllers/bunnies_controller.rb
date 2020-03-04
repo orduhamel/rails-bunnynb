@@ -5,6 +5,7 @@ class BunniesController < ApplicationController
 
   def show
     @bunny = Bunny.find(params[:id])
+    @booking = Booking.new
   end
 
   def create

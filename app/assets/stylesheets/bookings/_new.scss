@@ -1,9 +1,14 @@
 .booking-new {
-  margin: 20px;
-  padding: 15px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .booking-form {
   margin-top: 10px;
   margin-bottom: 10px;
+  width: 100%;
+
+  .bunny-btn {
+    padding: 10px;
+  }
 }
