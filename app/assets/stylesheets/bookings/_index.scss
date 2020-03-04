@@ -1,0 +1,52 @@
+.big-container-principal{
+margin: 100px;
+}
+
+.big-container-principal h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.container-list-booking {
+  margin: 10px;
+  align-content: center;
+  margin-top: 50px;
+  border: 1px solid $gray;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 100vh;
+  border-radius: 5px;
+}
+
+.container-list-booking li {
+list-style: none;
+}
+
+.card-list-booking-header {
+
+  border: 1px solid $gray;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.card-list-booking-header p {
+font-weight: bold;
+font-size: 22px;
+padding: 10px;
+}
+
+
+.card-list-booking {
+  border: 1px solid $gray;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-list-booking p {
+  font-size: 20px;
+  padding: 10px;
+}
