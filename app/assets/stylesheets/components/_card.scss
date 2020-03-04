@@ -3,16 +3,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
-}
 
+}
+.index-card:hover {
+  text-decoration: none;
+}
 .card-bunny {
   border: 1px solid $gray;
   border-radius: 5px;
   padding-bottom: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 350px;
+  height: 300px;
 }
 
+.card-bunny:hover {
+  opacity: 0.8;
+}
 .wrap-container {
   display: flex;
 }
@@ -37,10 +43,10 @@
 
 #bunnies-title {
   color: $black;
-  margin-left: 0;
   padding-top: 20px;
   padding-bottom: 30px;
-  background-color: $light-gray;
+  text-align: left;
+  margin-left: 10px;
 }
 
 .bunny-picture {
@@ -51,7 +57,9 @@
 
 .card-body-bunny {
   position: relative;
+  color: $black;
 }
+
 
 .card-body-bunny bunny-btn {
   margin-bottom: 20px;
@@ -59,5 +67,10 @@
 
 .card-title-bunny {
   padding: 5px 5px;
-  background-color: $light-gray;
+  color: $black;
+  padding-left: 10px;
+}
+
+.card-text-bunny {
+  padding-left: 10px;
 }
