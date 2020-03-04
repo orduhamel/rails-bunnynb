@@ -1,4 +1,49 @@
-<h2>Sign up</h2>
+<div class="signin">
+  <div class="signin-image">
+<!--     <h2>BONJOUR</h2> -->
+  </div>
+  <div class="form-signin">
+    <div class="signin-titles">
+      <h1>Bunnynb</h1>
+      <h4>Connectez-vous</h4>
+    </div>
+    <div class="form">
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      label: false,
+                      placeholder: 'Votre addresse email',
+                      input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      label: false,
+                      placeholder: 'Votre mot de passe',
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      required: true,
+                      label: false,
+                      placeholder: 'Votre mot de passe',
+                      input_html: { autocomplete: "new-password" } %>
+        </div>
+
+        <div class="form-actions bunny-btn">
+          <%= f.button :submit, "S'inscrire" %>
+        </div>
+      <% end %>
+
+      <div class="devise-links">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <h2>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -7,19 +52,28 @@
     <%= f.input :email,
                 required: true,
                 autofocus: true,
+                label: false,
+                placeholder: 'Votre addresse email',
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                label: false,
+                placeholder: 'Votre mot de passe',
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
                 required: true,
+                label: false,
+                placeholder: 'Votre mot de passe',
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+  <div class="form-actions bunny-btn">
+    <%= f.button :submit, "Se connecter" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="devise-links">
+  <%= render "devise/shared/links" %>
+</div>
+ -->
