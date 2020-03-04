@@ -1,32 +1,44 @@
-<div class="wrapper-bunny">
+<div class="bunny-container">
+  <div class="wrapper-bunny">
 
-  <div class='photo-bunny-container'>
-    <%= cl_image_tag @bunny.photo.key, class: "b-picture" %>
-    <%= cl_image_tag @bunny.user.photo.key, class: "user-picture-bunny" %>
-  </div>
-
-  <div class="description-bunny-container">
-    <h1 id='bunny-name'><%= @bunny.name %></h1>
-    <p><%= @bunny.description %></p>
-    <div>
-      <p id="price-per-day"><%= @bunny.price_per_day %> € par jour.</p>
+    <div class='photo-bunny-container'>
+      <%= cl_image_tag @bunny.photo.key, width: 600, height: 300,crop: :fill, class: "b-picture" %>
     </div>
-    <div>
-      <ul>
-        <li><%= @bunny.size %></li>
-        <li><%= @bunny.weight %></li>
-        <li><%= @bunny.fur %></li>
-        <li><%= @bunny.skill %></li>
-        <li><%= @bunny.cleanliness %></li>
-      </ul>
+
+    <div class="description-bunny-container">
+      <h1 id='bunny-name'><%= @bunny.name.capitalize %></h1>
+      <div>
+        <p id="price-per-day"><em><%= @bunny.price_per_day %> €/jour</em></p>
+      </div>
+      <p><%= @bunny.description.capitalize %></p>
+      <div>
+        <ul>
+          <li>
+            Taille : <strong><%= @bunny.size.capitalize %></strong>
+          </li>
+          <li>
+            Poids : <strong><%= @bunny.weight.capitalize %></strong>
+          </li>
+          <li>
+            Pelage : <strong><%= @bunny.fur.capitalize %></strong>
+          </li>
+          <li>
+            Compétence clé : <strong><%= @bunny.skill.capitalize %></strong>
+          </li>
+          <li>
+            Propreté : <%= '💧' * @bunny.cleanliness %>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bunny-owner">
+        <%= cl_image_tag @bunny.user.photo.key, class: "user-picture-bunny" %>
+        <p><%= @bunny.name.capitalize %> est l'heureux lapin de <%= @bunny.user.first_name.capitalize %> <%= @bunny.user.last_name.capitalize %>.</p>
+      </div>
     </div>
   </div>
-
-
+  <%= render 'bookings/form', bunny: @bunny, booking: @booking %>
+  <div class="">
+    <%= link_to 'Retour à la liste', bunnies_path, class: 'btn btn-outline-secondary' %>
+  </div>
 </div>
-
-<div class="container text-center mt-4">
-  <%= link_to 'retour à la liste', bunnies_path, class: 'btn btn-secondary' %>
-</div>
-
-<%= render 'bookings/form', bunny: @bunny, booking: @booking %>

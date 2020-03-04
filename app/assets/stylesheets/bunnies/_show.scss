@@ -1,28 +1,31 @@
+.bunny-container {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
 .wrapper-bunny {
-  width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
-  margin-top: 30px;
 }
 
 .photo-bunny-container {
-  width: 40%;
+  // width: 40%;
   position: relative;
-  margin-left: 60px;
 }
 
 .description-bunny-container {
   width: 40%;
-  margin-right: 60px;
   position: relative;
-  border-bottom: 1px solid $light-gray;
+  // border-bottom: 1px solid $light-gray;
+
+  ul {
+    list-style-type: none;
+  }
 }
 
-#bunny-name {
-  background-color: $light-gray;
-  text-align: center;
-}
 
 .b-picture {
   width: 100%;
@@ -30,18 +33,33 @@
   padding-bottom: 20px;
 }
 
+.bunny-owner {
+  display:flex;
+  align-items: center;
+  border: solid 1px $light-gray;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .user-picture-bunny {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border: 1px solid white;
   border-radius: 50%;
   object-fit: cover;
-  position: absolute;
+  // position: absolute;
   top: 290px;
   right: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin-right: 20px;
 }
 
 #price-per-day {
-
+  em {
+    font-size: 18px;
+  }
 }
+
+// .btn-outline-secondary {
+//   color: black !important;
+// }

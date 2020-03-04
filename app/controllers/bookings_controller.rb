@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.bunny = Bunny.find(params[:id])
+    @booking.bunny = Bunny.find(params[:bunny_id])
     @booking.user = current_user
     if @booking.save
       redirect_to bookings_path
