@@ -1,20 +1,21 @@
 <div class='text-center'>
-  <h1 id='bunnies-title'>Meet your Bunnies</h1>
+  <h1 id='bunnies-title'>Rencontrez nos lapins</h1>
 </div>
 
 <div class='wrap-container'>
 
   <div class='main-bunny'>
     <% @bunnies.each do |bunny| %>
-      <div class="card-bunny m-2" style="width: 18rem;">
-        <div class="card-body-bunny text-center">
-          <%= cl_image_tag bunny.photo.key, class: "bunny-picture" %>
-          <h2 class="card-title-bunny"><%= bunny.name %></h2>
-          <p class="card-text-bunny"><%= bunny.skill %></p>
-          <p id="bunny-price"><%= bunny.price_per_day %>€</p>
-          <%= link_to 'en savoir plus', bunny_path(bunny), class: 'bunny-btn' %>
+      <%= link_to bunny_path(bunny), class: "index-card" do %>
+        <div class="card-bunny m-2" style="width: 18rem;">
+          <div class="card-body-bunny">
+            <%= cl_image_tag bunny.photo.key, class: "bunny-picture" %>
+            <h2 class="card-title-bunny"><%= bunny.name %></h2>
+              <p class="card-text-bunny"><%= bunny.skill %></p>
+              <p id="bunny-price"><%= bunny.price_per_day %>€</p>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 
