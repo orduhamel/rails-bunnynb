@@ -1,7 +1,10 @@
 .map {
   width: 50%;
-  border: 1px solid gray;
   height : 100vh;
   position: sticky;
+  object-fit: cover;
 }
 
+.fausse-map {
+  width: 100%;
+}
