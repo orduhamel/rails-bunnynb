@@ -118,7 +118,7 @@ coco.user = arthur #owner
 coco.save!
 
 lulu_image = URI.open("https://images.unsplash.com/photo-1517108774990-66920c6f1847?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
-lulu = Bunny.new(name: 'Lulu', description: 'Lulu n\'apprécie par la compagnie des autres animaux, elle passe l\'essentiel de son temps à dormir.', address: 'Saint-Herblain', price_per_day: 15, fur: 'soft', skill: 'boxer', weight: 'light', size: 'small', cleanliness: 4)
+lulu = Bunny.new(name: 'Lulu', description: 'Lulu n\'apprécie pas la compagnie des autres animaux, elle passe l\'essentiel de son temps à dormir.', address: 'Saint-Herblain', price_per_day: 15, fur: 'soft', skill: 'boxer', weight: 'light', size: 'small', cleanliness: 4)
 lulu.photo.attach(io: lulu_image, filename: "#{lulu.name.downcase}.jpg", content_type: 'image/jpg')
 lulu.user = brigitte #owner
 lulu.save!
