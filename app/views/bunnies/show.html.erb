@@ -1,18 +1,30 @@
-<div class="container">
-   <div class="card-trip">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-    <div class="card-trip-infos">
-      <div>
-        <h2><%= @bunny.name %></h2>
-        <p><%= @bunny.description %></p>
-      </div>
+<div class="wrapper-bunny">
 
-
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      <h2 class="card-trip-pricing"><%= @bunny.price_per_day %></h2>
-    </div>
-
-    <a class="btn btn-secondary" src="#">Réserver</a>
-    <%= link_to 'retour à la liste', bunnies_path, class: 'btn btn-secondary' %>
+  <div class='photo-bunny-container'>
+    <%= cl_image_tag @bunny.photo.key, class: "b-picture" %>
+    <%= cl_image_tag @bunny.user.photo.key, class: "user-picture-bunny" %>
   </div>
+
+  <div class="description-bunny-container">
+    <h1 id='bunny-name'><%= @bunny.name %></h1>
+    <p><%= @bunny.description %></p>
+    <div>
+      <p id="price-per-day"><%= @bunny.price_per_day %> € par jour.</p>
+    </div>
+    <div>
+      <ul>
+        <li><%= @bunny.size %></li>
+        <li><%= @bunny.weight %></li>
+        <li><%= @bunny.fur %></li>
+        <li><%= @bunny.skill %></li>
+        <li><%= @bunny.cleanliness %></li>
+      </ul>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="container text-center mt-4">
+  <%= link_to 'retour à la liste', bunnies_path, class: 'btn btn-secondary' %>
 </div>
