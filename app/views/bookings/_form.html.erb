@@ -1,0 +1,16 @@
+<div class="booking-new">
+  <h2>Réserver ce lapin</h2>
+  <div class="form booking-form">
+    <%= simple_form_for [bunnies, bookings] do |f| %>
+      <%= f.input :start_date, label: 'Date de début' %>
+      <%= f.input :end_date, label: 'Date de fin' %>
+      <%= f.submit 'Réserver', class: 'bunny-btn' %>
+    <% end %>
+  </div>
+
+  <hr>
+
+  <div class="booking-total-price">
+    <p><strong>Total: <%= bunny.price_per_day*((end_date - start_date).to_i)€ %></strong></p>
+  </div>
+</div>
