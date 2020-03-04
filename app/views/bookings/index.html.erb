@@ -1,15 +1,34 @@
 
-<h1>All your bookings</h1>
-
-<ul>
-  <div class="cols row-cols-sm-4 p-5 m-auto">
-   <% @bookings.each do |booking| %>
-      <div class="card m-3">
+<div class="big-container-principal">
+  <h1>Bunny à venir</h1>
+    <div class="container-list-booking">
+      <ul>
         <li>
-          <%= booking.bunny.name %>
-        </li>
-      </div>
-    <% end %>
-  </div>
-</ul>
-
+          <div class="card-list-booking-header">
+          <div class="container-name-bunny">
+            <p>Name</p>
+          </div>
+          <div class="container-total-price">
+            <p>Total price</p>
+          </div>
+          <div class="container-date-booking">
+            <p>Start date - End date</p>
+          </div>
+          </div>
+        <% @bookings.each do |booking| %>
+          <div class="card-list-booking">
+              <div class="container-name-bunny">
+                <p><%= booking.bunny.name %></p>
+              </div>
+              <div class="container-total-price">
+                <p><%=booking.total_price%>€</p>
+              </div>
+              <div class="container-date-booking">
+                <p> <%= booking.start_date %> - <%= booking.end_date %></p>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+ </div>
+</div>
