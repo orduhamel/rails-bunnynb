@@ -4,10 +4,6 @@ class BookingsController < ApplicationController
     #@user = User.find(params[:id])
   end
 
-  def new
-    @booking = Booking.new
-  end
-
   def create
     @booking = Booking.new(booking_params)
     @booking.bunny = Bunny.find(params[:id])

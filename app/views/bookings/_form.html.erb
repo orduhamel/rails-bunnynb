@@ -1,7 +1,7 @@
 <div class="booking-new">
   <h2>Réserver ce lapin</h2>
   <div class="form booking-form">
-    <%= simple_form_for [bunnies, bookings] do |f| %>
+    <%= simple_form_for [bunny, booking] do |f| %>
       <%= f.input :start_date, label: 'Date de début' %>
       <%= f.input :end_date, label: 'Date de fin' %>
       <%= f.submit 'Réserver', class: 'bunny-btn' %>
