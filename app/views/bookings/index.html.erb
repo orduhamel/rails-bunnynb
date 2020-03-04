@@ -1,4 +1,4 @@
-
+<!--
 <div class="big-container-principal">
   <h1>Bunny à venir</h1>
     <div class="container-list-booking">
@@ -31,4 +31,27 @@
         <% end %>
       </ul>
  </div>
+</div>
+ -->
+ <div class="container mt-4">
+   <h1>Lapins à venir</h1>
+ </div>
+
+ <div class="container wrapper-bookings">
+<% @bookings.each do |booking| %>
+  <div class="card-product">
+    <%= cl_image_tag booking.bunny.photo.key %>
+    <div class="card-product-infos">
+      <div>
+        <h2><%= booking.bunny.name %></h2>
+        <p><%=booking.total_price%>€</p>
+      </div>
+      <div>
+        <i class="fas fa-history"></i>
+        <p><%= booking.start_date %></p>
+        <p><%= booking.end_date %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
 </div>
