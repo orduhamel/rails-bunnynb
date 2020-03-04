@@ -1,52 +1,108 @@
-.big-container-principal{
-margin: 100px;
-}
+// .big-container-principal{
+// margin: 100px;
+// }
 
-.big-container-principal h1 {
-  display: flex;
-  justify-content: center;
-}
+// .big-container-principal h1 {
+//   display: flex;
+//   justify-content: center;
+// }
 
-.container-list-booking {
-  margin: 10px;
-  align-content: center;
-  margin-top: 50px;
-  border: 1px solid $gray;
+// .container-list-booking {
+//   margin: 10px;
+//   align-content: center;
+//   margin-top: 50px;
+//   border: 1px solid $gray;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   height: 100vh;
+//   border-radius: 5px;
+// }
+
+// .container-list-booking li {
+// list-style: none;
+// }
+
+// .card-list-booking-header {
+
+//   border: 1px solid $gray;
+//   border-radius: 5px;
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .card-list-booking-header p {
+// font-weight: bold;
+// font-size: 22px;
+// padding: 10px;
+// }
+
+
+// .card-list-booking {
+//   border: 1px solid $gray;
+//   border-radius: 5px;
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// .card-list-booking p {
+//   font-size: 20px;
+//   padding: 10px;
+// }
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 100vh;
-  border-radius: 5px;
-}
-
-.container-list-booking li {
-list-style: none;
-}
-
-.card-list-booking-header {
-
-  border: 1px solid $gray;
-  border-radius: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   display: flex;
-  justify-content: space-between;
-}
-.card-list-booking-header p {
-font-weight: bold;
-font-size: 22px;
-padding: 10px;
+  align-items: center;
 }
 
-
-.card-list-booking {
-  border: 1px solid $gray;
-  border-radius: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
 }
 
-.card-list-booking p {
+.card-product h2 {
   font-size: 20px;
-  padding: 10px;
+  font-weight: bold;
+  margin: 0;
 }
+
+.card-product p {
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.wrapper-bookings {
+  width: 1200px;
+  margin: O auto;
+  margin-top: 50px;
+}
+
+.card-product-infos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dates-bookings-index {
+  width: 50%;
+  height: 50%;
+  display: inline;
+}
+
+
+
+
+
