@@ -1,10 +1,15 @@
 <div class="booking-new">
   <h2>Réserver ce lapin</h2>
   <div class="form booking-form">
-    <%= simple_form_for [bunny, booking] do |f| %>
-      <%= f.input :start_date, label: 'Date de début' %>
-      <%= f.input :end_date, label: 'Date de fin' %>
-      <%= f.submit 'Réserver', class: 'bunny-btn' %>
+    <%= simple_form_for [bunny, booking],
+      wrapper: :inline_form,
+      html: { class: 'form-inline' },
+      wrapper_mappings: {
+        boolean: :inline_boolean
+      } do |f| %>
+        <%= f.input :start_date, placeholder: 'Date de début', as: :string, required: false, input_html: { id: "range_start" } %>
+        <%= f.input :end_date, placeholder: 'Date de fin', as: :string, required: false, input_html: { id: "range_end" } %>
+        <%= f.submit 'Réserver', class: 'bunny-btn' %>
     <% end %>
   </div>
 </div>
