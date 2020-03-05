@@ -1,12 +1,15 @@
 .card-product {
   overflow: hidden;
   height: 180px;
-  width: 900px;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.08);
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+}
+
+.principal-title-booking {
+
 }
 
 .card-product img {
@@ -17,7 +20,6 @@
 
 .card-product h2 {
   font-size: 18px;
-  margin: 0;
 }
 
 .card-product p {
@@ -32,8 +34,6 @@
 }
 
 .wrapper-bookings {
-  width: 1200px;
-  margin: O auto;
   margin-top: 50px;
 }
 
@@ -74,12 +74,13 @@ padding-left: 70px;
 }
 
 .owner-name {
- padding-left: 40px;
  font-size: 14px !important;
+ text-align: center;
 }
 
 .address-owner {
   padding-left: 20px;
+  text-align: center;
 }
 
 .pending {
