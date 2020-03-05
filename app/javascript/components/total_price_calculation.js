@@ -13,7 +13,7 @@ const calcTotalPrice = (startDate, endDate) => {
 
   // Calculer le total_price
   const totalPrice = Number.parseInt(pricePerDay, 10) * rangeDate; // renvoie NaN
-  console.log(totalPrice);
+
   // Insérer le total_price dans le HTML
   const totalPriceBox = document.querySelector("#total-price");
   if (totalPrice > 0) {
