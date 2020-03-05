@@ -7,7 +7,7 @@ class BunniesController < ApplicationController
         lat: bunny.latitude,
         lng: bunny.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { bunny: bunny }),
-        image_url: helpers.asset_url('noun_bunny_3060201_100')
+        image_url: helpers.asset_url('noun_bunny_3060201_100.png')
       }
     end
   end
