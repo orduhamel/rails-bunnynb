@@ -6,8 +6,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.bunny = Bunny.find(params[:bunny_id])
     @booking.user = current_user
+    @booking.bunny = Bunny.find(params[:bunny_id])
+    @booking.total_price = @booking.bunny.price_per_day*((@booking.end_date - @booking.start_date).to_i)
+    @booking.status = 'pending'
     if @booking.save
       redirect_to bookings_path
     else
@@ -18,6 +20,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:total_price, :status, :start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
