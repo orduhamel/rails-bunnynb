@@ -12,4 +12,8 @@ class Bunny < ApplicationRecord
   # validates :cleanliness, inclusion: { in: (0..5) }
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  def blank_poop
+    5 - cleanliness
+  end
 end
