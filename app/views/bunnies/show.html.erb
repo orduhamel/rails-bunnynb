@@ -5,7 +5,7 @@
     <div class="">
     <%= link_to 'Retour à la liste', bunnies_path, class: 'btn btn-outline-secondary mb-4' %>
     </div>
-    <%= cl_image_tag @bunny.photo.key, width: 600, height: 400, crop: :fill, class: "b-picture" %>
+    <%= cl_image_tag @bunny.photo.key, width: 600, height: 600, crop: :fill, class: "b-picture" %>
   </div>
 
   <div class="wrapper-description-bunny">
@@ -33,15 +33,15 @@
       <li>
         <i class="fas fa-feather-alt"></i> <strong><%= @bunny.fur.capitalize %></strong>
       </li>
-      <li class="<%= @bunny.skill %>">
-        <strong><%= t(@bunny.skill).capitalize %></strong>
-      </li>
       <li>
         <%= '' * @bunny.cleanliness %>
       </li>
+      <li class="label bunny skill <%= @bunny.skill %>">
+        <strong><%= t(@bunny.skill).capitalize %></strong>
+      </li>
     </ul>
   </div>
-
+    <%= render 'bookings/form', bunny: @bunny, booking: @booking %>
   </div>
 </div>
 
@@ -49,7 +49,3 @@
   <%= cl_image_tag @bunny.user.photo.key, class: "user-picture-bunny" %>
   <p><%= @bunny.name.capitalize %> est l'heureux lapin de <%= @bunny.user.first_name.capitalize %> <%= @bunny.user.last_name.capitalize %>.</p>
 </div>
-
-
-<%= render 'bookings/form', bunny: @bunny, booking: @booking %>
-
