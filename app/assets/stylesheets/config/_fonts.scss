@@ -1,12 +1,12 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap');
 // @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900|Open+Sans:400,700,800&display=swap');
 
 // Define fonts for body and headers
-$font: "Source Sans Pro", "sans-serif";
-// $body-font: "Work Sans", "Helvetica", "sans-serif";
-// $headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: "Open Sans", "sans-serif";
+$headers-font: "Montserrat", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -18,15 +18,10 @@ $font: "Source Sans Pro", "sans-serif";
 // }
 // $my-font: "Font Name";
 
-h1 {
-  font-size: 60px;
-}
-
-h2 {
-  font-family: "Source Sans Pro", "sans-serif";
-  font-weight: 400;
-}
-
-#title-site {
-  font-family: 'Shadows Into Light', cursive;
-}
+$font-size-base: 1rem;
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
