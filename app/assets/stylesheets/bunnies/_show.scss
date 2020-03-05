@@ -40,7 +40,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid $light-gray;
-  border-top: 1px solid $light-gray;
+  // border-top: 1px solid $light-gray;
 }
 
 .liste-caracteristiques-bunny ul li {
@@ -90,6 +90,26 @@
 //   color: black !important;
 // }
 
-.booking-new {
+.booking-form {
   width: 100%;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+#total-price {
+  font-size: 20px;
+  padding: 10px;
+}
+
+#new-booking {
+  margin: 0;
+  width: 100%;
+}
+
+.booking-new {
+  margin-top: 20px;
+}
+#total-price-euros {
+  margin-right: 10px;
 }
