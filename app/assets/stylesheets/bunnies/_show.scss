@@ -22,12 +22,10 @@
 
 .wrapper-description-bunny {
   margin-top: 60px;
-  border-bottom: 1px solid $light-gray;
 }
 
 .name-price-bunny-container {
   width: 100%;
-  // border-bottom: 1px solid $light-gray;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -40,7 +38,6 @@
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid $light-gray;
-  // border-top: 1px solid $light-gray;
 }
 
 .liste-caracteristiques-bunny ul li {
@@ -60,26 +57,27 @@
   border: solid 1px $light-gray;
   padding: 10px;
   border-radius: 5px;
-  width: 1100px;
-  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 0 !important;
 }
 
 .user-picture-bunny {
   width: 50px;
   height: 50px;
-  border: 1px solid white;
   border-radius: 50%;
   object-fit: cover;
-  // position: absolute;
-  top: 290px;
-  right: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 #price-per-day {
-  font-size: 24px;
-  color: $green !important;
+  font-size: 30px;
+  color: $green;
+  margin-left: 10px;
+}
+
+#price-day-word {
+  font-size: 20px;
 }
 
 #bunny-name {
@@ -98,7 +96,7 @@
 }
 
 #total-price {
-  font-size: 20px;
+  font-size: 25px;
   padding: 10px;
 }
 
@@ -112,4 +110,10 @@
 }
 #total-price-euros {
   margin-right: 10px;
+}
+#light-poop {
+  opacity: .3
+}
+.fa-arrows-alt-h {
+  margin-top: 20px;
 }

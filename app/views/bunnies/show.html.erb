@@ -14,7 +14,7 @@
       <h1 id='bunny-name'><%= @bunny.name.capitalize %></h1>
     </div>
     <div>
-        <h2 id="price-per-day" data-price="<%= @bunny.price_per_day %>"><em><%= @bunny.price_per_day %> €/jour</em></h2>
+        <h2 id="price-per-day" data-price="<%= @bunny.price_per_day %>"><%= @bunny.price_per_day %> €/<span id="price-day-word">jour</span></h2>
     </div>
   </div>
 
@@ -24,6 +24,9 @@
 
   <div class="liste-caracteristiques-bunny">
     <ul>
+      <li class="<%= @bunny.skill %>">
+        <strong><%= t(@bunny.skill).capitalize %></strong>
+      </li>
       <li>
         <i class="fas fa-arrows-alt-h"></i> <strong><%= @bunny.size.capitalize %></strong>
       </li>
@@ -34,18 +37,20 @@
         <i class="fas fa-feather-alt"></i> <strong><%= @bunny.fur.capitalize %></strong>
       </li>
       <li>
-        <%= '' * @bunny.cleanliness %>
-      </li>
-      <li class="label bunny skill <%= @bunny.skill %>">
-        <strong><%= t(@bunny.skill).capitalize %></strong>
+        <% @bunny.cleanliness.times do  %>
+          <i class="fas fa-poop"></i>
+        <% end %>
+        <% @bunny.blank_poop.times do %>
+          <span id="light-poop"><i class="fas fa-poop"></i></span>
+        <% end %>
       </li>
     </ul>
   </div>
     <%= render 'bookings/form', bunny: @bunny, booking: @booking %>
+  <div class="bunny-owner">
+    <%= cl_image_tag @bunny.user.photo.key, class: "user-picture-bunny" %>
+    <p><%= @bunny.name.capitalize %> est l'heureux lapin de <%= @bunny.user.first_name.capitalize %> <%= @bunny.user.last_name.capitalize %>.</p>
+  </div>
   </div>
 </div>
 
-<div class="bunny-owner">
-  <%= cl_image_tag @bunny.user.photo.key, class: "user-picture-bunny" %>
-  <p><%= @bunny.name.capitalize %> est l'heureux lapin de <%= @bunny.user.first_name.capitalize %> <%= @bunny.user.last_name.capitalize %>.</p>
-</div>
