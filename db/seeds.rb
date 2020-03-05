@@ -146,12 +146,12 @@ booking1.bunny = cannelle #bunny
 booking1.user = simon #renter
 booking1.save!
 
-booking2 = Booking.new(total_price: 42, status: 'pending', start_date: DateTime.new(2020,3,20), end_date: DateTime.new(2020,3,23)) # location de 3 jours
+booking2 = Booking.new(total_price: 42, status: 'confirmed', start_date: DateTime.new(2020,3,20), end_date: DateTime.new(2020,3,23)) # location de 3 jours
 booking2.bunny = arya #bunny
 booking2.user = sylvain #renter
 booking2.save!
 
-booking3 = Booking.new(total_price: 13, status: 'pending', start_date: DateTime.new(2020,3,15), end_date: DateTime.new(2020,3,16)) # location 1 jour
+booking3 = Booking.new(total_price: 13, status: 'refused', start_date: DateTime.new(2020,3,15), end_date: DateTime.new(2020,3,16)) # location 1 jour
 booking3.bunny = pistache #bunny
 booking3.user = margaux #renter
 booking3.save!

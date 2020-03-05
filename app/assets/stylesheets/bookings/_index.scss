@@ -1,79 +1,26 @@
-// .big-container-principal{
-// margin: 100px;
-// }
-
-// .big-container-principal h1 {
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .container-list-booking {
-//   margin: 10px;
-//   align-content: center;
-//   margin-top: 50px;
-//   border: 1px solid $gray;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-//   height: 100vh;
-//   border-radius: 5px;
-// }
-
-// .container-list-booking li {
-// list-style: none;
-// }
-
-// .card-list-booking-header {
-
-//   border: 1px solid $gray;
-//   border-radius: 5px;
-//   padding-top: 10px;
-//   padding-bottom: 10px;
-//   display: flex;
-//   justify-content: space-between;
-// }
-// .card-list-booking-header p {
-// font-weight: bold;
-// font-size: 22px;
-// padding: 10px;
-// }
-
-
-// .card-list-booking {
-//   border: 1px solid $gray;
-//   border-radius: 5px;
-//   padding-top: 10px;
-//   padding-bottom: 10px;
-//   display: flex;
-//   justify-content: space-between;
-// }
-
-// .card-list-booking p {
-//   font-size: 20px;
-//   padding: 10px;
-// }
-
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 180px;
+  width: 900px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .card-product img {
   height: 100%;
-  width: 120px;
+  width: 200px;
   object-fit: cover;
 }
 
 .card-product h2 {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
   margin: 0;
 }
 
 .card-product p {
-  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -96,13 +43,74 @@
   justify-content: space-between;
 }
 
-.dates-bookings-index {
-  width: 50%;
-  height: 50%;
-  display: inline;
+.container-date-booking {
+  margin-top: 40px;
 }
 
+.booking-date{
+  font-weight: bold;
+  font-size: 18px;
+}
+.container-name-price {
+  margin-left: 20px;
+}
+.status-booking {
+  font-size: 22px;
+  font-weight: bold;
+}
 
+.info-owner {
+border-left: 1px $gray solid;
+width: 200px;
+}
+.container-photo-owner {
+padding-left: 70px;
+}
 
+.photo-owner {
+  border-radius: 50%;
+  height: 70px !important;
+  width: 70px !important;
+}
 
+.owner-name {
+ padding-left: 40px;
+ font-size: 14px !important;
+}
 
+.address-owner {
+  padding-left: 20px;
+}
+
+.pending {
+color: #FBB945;
+border-radius: 10px;
+background-color: #FFF2B0;
+display: inline-block;
+padding: 3px 10px;
+margin-bottom: 20px;
+margin-top: 10px;
+margin-left: 15px;
+}
+
+.confirmed {
+color: #599A24;
+border-radius: 10px;
+background-color: #deff8b;
+display: inline-block;
+padding: 3px 10px;
+margin-bottom: 20px;
+margin-top: 10px;
+margin-left: 15px;
+}
+
+.refused {
+color: $dark-gray;
+border-radius: 10px;
+background-color: #ebe6e6;
+display: inline-block;
+padding: 3px 10px;
+margin-bottom: 20px;
+margin-top: 10px;
+margin-left: 15px;
+}

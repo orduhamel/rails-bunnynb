@@ -1,40 +1,5 @@
-<!--
-<div class="big-container-principal">
-  <h1>Bunny à venir</h1>
-    <div class="container-list-booking">
-      <ul>
-        <li>
-          <div class="card-list-booking-header">
-          <div class="container-name-bunny">
-            <p>Name</p>
-          </div>
-          <div class="container-total-price">
-            <p>Total price</p>
-          </div>
-          <div class="container-date-booking">
-            <p>Start date - End date</p>
-          </div>
-          </div>
-        <% @bookings.each do |booking| %>
-          <div class="card-list-booking">
-              <div class="container-name-bunny">
-                <p><%= booking.bunny.name %></p>
-              </div>
-              <div class="container-total-price">
-                <p><%=booking.total_price%>€</p>
-              </div>
-              <div class="container-date-booking">
-                <p> <%= booking.start_date %> - <%= booking.end_date %></p>
-              </div>
-            </div>
-          </li>
-        <% end %>
-      </ul>
- </div>
-</div>
- -->
  <div class="container mt-4">
-   <h1>Lapins à venir</h1>
+   <h1>Réservation à venir</h1>
  </div>
 
  <div class="container wrapper-bookings">
@@ -42,14 +7,26 @@
   <div class="card-product">
     <%= cl_image_tag booking.bunny.photo.key %>
     <div class="card-product-infos">
-      <div>
+      <div class="container-name-price-status">
+        <div class="status-booking <%= booking.status %>"> <%= t(booking.status) %></div>
+        <div class="container-name-price">
         <h2><%= booking.bunny.name %></h2>
         <p><%=booking.total_price%>€</p>
+        </div>
       </div>
-      <div>
-        <i class="fas fa-history"></i>
-        <p><%= booking.start_date %></p>
-        <p><%= booking.end_date %></p>
+      <div class="container-date-booking">
+        <p class="booking-date"> <%= l(booking.start_date, format: '%d %B') %> - <%= l(booking.end_date, format:'%d %B') %></p>
+      </div>
+      <div class="info-owner">
+        <div class="container-photo-owner">
+          <p><%= cl_image_tag booking.bunny.user.photo.key, class: "photo-owner"%></p>
+        </div>
+        <div class="owner-name">
+          <p><%=booking.bunny.user.first_name%> <%=booking.bunny.user.last_name%></p>
+        </div>
+        <div class="address-owner">
+          <p><%= booking.bunny.address %></p>
+        </div>
       </div>
     </div>
   </div>
