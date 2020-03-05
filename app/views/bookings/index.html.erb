@@ -1,34 +1,42 @@
- <div class="container mt-4">
-   <h1>Réservation à venir</h1>
- </div>
-
- <div class="container wrapper-bookings">
-<% @bookings.each do |booking| %>
-  <div class="card-product">
-    <%= cl_image_tag booking.bunny.photo.key %>
-    <div class="card-product-infos">
-      <div class="container-name-price-status">
-        <div class="status-booking <%= booking.status %>"> <%= t(booking.status) %></div>
-        <div class="container-name-price">
-        <h2><%= booking.bunny.name %></h2>
-        <p><%=booking.total_price%>€</p>
-        </div>
-      </div>
-      <div class="container-date-booking">
-        <p class="booking-date"> <%= l(booking.start_date, format: '%d %B') %> - <%= l(booking.end_date, format:'%d %B') %></p>
-      </div>
-      <div class="info-owner">
-        <div class="container-photo-owner">
-          <p><%= cl_image_tag booking.bunny.user.photo.key, class: "photo-owner"%></p>
-        </div>
-        <div class="owner-name">
-          <p><%=booking.bunny.user.first_name%> <%=booking.bunny.user.last_name%></p>
-        </div>
-        <div class="address-owner">
-          <p><%= booking.bunny.address %></p>
-        </div>
-      </div>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-10 offset-md-1">
+      <h1 class="principal-title-booking">Réservation à venir</h1>
     </div>
   </div>
-<% end %>
+</div>
+
+<div class="container wrapper-bookings">
+  <div class="row">
+    <% @bookings.each do |booking| %>
+      <div class="col-sm-10 offset-md-1">
+        <div class="card-product">
+          <%= cl_image_tag booking.bunny.photo.key %>
+          <div class="card-product-infos">
+            <div class="container-name-price-status">
+              <div class="status-booking <%= booking.status %>"> <%= t(booking.status) %></div>
+              <div class="container-name-price">
+                <h2><%= booking.bunny.name %></h2>
+                <p><%=booking.total_price%>€</p>
+              </div>
+            </div>
+            <div class="container-date-booking">
+              <p class="booking-date"> <%= l(booking.start_date, format: '%d %B') %> - <%= l(booking.end_date, format:'%d %B') %></p>
+            </div>
+            <div class="info-owner">
+              <div class="container-photo-owner">
+                <p><%= cl_image_tag booking.bunny.user.photo.key, class: "photo-owner"%></p>
+              </div>
+              <div class="owner-name">
+                <p><%=booking.bunny.user.first_name%> <%=booking.bunny.user.last_name%></p>
+              </div>
+              <div class="address-owner">
+                <p><%= booking.bunny.address %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
