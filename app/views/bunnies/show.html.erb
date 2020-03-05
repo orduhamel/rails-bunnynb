@@ -1,44 +1,55 @@
-<div class="bunny-container">
-  <div class="wrapper-bunny">
 
-    <div class='photo-bunny-container'>
-      <%= cl_image_tag @bunny.photo.key, width: 600, height: 300,crop: :fill, class: "b-picture" %>
+<div class="wrapper-bunny">
+
+  <div class='photo-bunny-container'>
+    <div class="">
+    <%= link_to 'Retour à la liste', bunnies_path, class: 'btn btn-outline-secondary mb-4' %>
     </div>
+    <%= cl_image_tag @bunny.photo.key, width: 600, height: 400, crop: :fill, class: "b-picture" %>
+  </div>
 
-    <div class="description-bunny-container">
+  <div class="wrapper-description-bunny">
+  <div class="name-price-bunny-container">
+    <div>
       <h1 id='bunny-name'><%= @bunny.name.capitalize %></h1>
-      <div>
-        <p id="price-per-day"><em><%= @bunny.price_per_day %> €/jour</em></p>
-      </div>
-      <p><%= @bunny.description.capitalize %></p>
-      <div>
-        <ul>
-          <li>
-            Taille : <strong><%= @bunny.size.capitalize %></strong>
-          </li>
-          <li>
-            Poids : <strong><%= @bunny.weight.capitalize %></strong>
-          </li>
-          <li>
-            Pelage : <strong><%= @bunny.fur.capitalize %></strong>
-          </li>
-          <li>
-            Compétence clé : <strong><%= @bunny.skill.capitalize %></strong>
-          </li>
-          <li>
-            Propreté : <%= '💧' * @bunny.cleanliness %>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bunny-owner">
-        <%= cl_image_tag @bunny.user.photo.key, class: "user-picture-bunny" %>
-        <p><%= @bunny.name.capitalize %> est l'heureux lapin de <%= @bunny.user.first_name.capitalize %> <%= @bunny.user.last_name.capitalize %>.</p>
-      </div>
+    </div>
+    <div>
+      <h2 id=“price-per-day” data-price=“<%= @bunny.price_per_day %>“><%= @bunny.price_per_day %> €/jour</h2>
     </div>
   </div>
-  <%= render 'bookings/form', bunny: @bunny, booking: @booking %>
-  <div class="">
-    <%= link_to 'Retour à la liste', bunnies_path, class: 'btn btn-outline-secondary' %>
+
+  <div class="description-bunny-container">
+    <p><%= @bunny.description.capitalize %></p>
+  </div>
+
+  <div class="liste-caracteristiques-bunny">
+    <ul>
+      <li>
+        <i class="fas fa-arrows-alt-h"></i> <strong><%= @bunny.size.capitalize %></strong>
+      </li>
+      <li>
+       <i class="fas fa-weight"></i> <strong><%= @bunny.weight.capitalize %></strong>
+      </li>
+      <li>
+        <i class="fas fa-feather-alt"></i> <strong><%= @bunny.fur.capitalize %></strong>
+      </li>
+      <li class="<%= @bunny.skill %>">
+        <strong><%= t(@bunny.skill).capitalize %></strong>
+      </li>
+      <li>
+        <%= '' * @bunny.cleanliness %>
+      </li>
+    </ul>
+  </div>
+
   </div>
 </div>
+
+<div class="bunny-owner">
+  <%= cl_image_tag @bunny.user.photo.key, class: "user-picture-bunny" %>
+  <p><%= @bunny.name.capitalize %> est l'heureux lapin de <%= @bunny.user.first_name.capitalize %> <%= @bunny.user.last_name.capitalize %>.</p>
+</div>
+
+
+<!--   <%= render 'bookings/form', bunny: @bunny, booking: @booking %>
+ -->
