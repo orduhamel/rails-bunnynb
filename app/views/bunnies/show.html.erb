@@ -14,7 +14,7 @@
       <h1 id='bunny-name'><%= @bunny.name.capitalize %></h1>
     </div>
     <div>
-      <h2 id=“price-per-day” data-price=“<%= @bunny.price_per_day %>“><%= @bunny.price_per_day %> €/jour</h2>
+        <h2 id="price-per-day" data-price="<%= @bunny.price_per_day %>"><em><%= @bunny.price_per_day %> €/jour</em></h2>
     </div>
   </div>
 
@@ -49,4 +49,3 @@
   <%= cl_image_tag @bunny.user.photo.key, class: "user-picture-bunny" %>
   <p><%= @bunny.name.capitalize %> est l'heureux lapin de <%= @bunny.user.first_name.capitalize %> <%= @bunny.user.last_name.capitalize %>.</p>
 </div>
-
