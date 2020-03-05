@@ -44,7 +44,7 @@
 }
 
 .container-date-booking {
-  margin-top: 40px;
+  margin-top: 8px;
 }
 
 .booking-date{
@@ -83,9 +83,9 @@ padding-left: 70px;
 }
 
 .pending {
-color: #FBB945;
+color: #975A16;
 border-radius: 10px;
-background-color: #FFF2B0;
+background-color: #FAF089;
 display: inline-block;
 padding: 3px 10px;
 margin-bottom: 20px;
@@ -94,7 +94,7 @@ margin-left: 15px;
 }
 
 .confirmed {
-color: #599A24;
+color: #276749;
 border-radius: 10px;
 background-color: #deff8b;
 display: inline-block;
@@ -105,7 +105,7 @@ margin-left: 15px;
 }
 
 .refused {
-color: $dark-gray;
+color: #2D3748;
 border-radius: 10px;
 background-color: #ebe6e6;
 display: inline-block;
