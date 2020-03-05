@@ -1,3 +1,4 @@
+<div class="container-principal-bunnies-index">
 <div class='text-center'>
   <h1 id='bunnies-title'>Rencontrez nos lapins</h1>
 </div>
@@ -11,7 +12,7 @@
           <div class="card-body-bunny">
             <%= cl_image_tag bunny.photo.key, class: "bunny-picture" %>
             <h2 class="card-title-bunny"><%= bunny.name %></h2>
-              <p class="card-text-bunny"><%= bunny.skill %></p>
+              <p class="card-text-bunny <%= bunny.skill %>"><%= t(bunny.skill) %></p>
               <p id="bunny-price"><%= bunny.price_per_day %>€</p>
           </div>
         </div>
@@ -26,7 +27,6 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
-
 </div>
-
+</div>
 
