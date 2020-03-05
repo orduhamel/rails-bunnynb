@@ -76,37 +76,37 @@ puts "Finished seeding 5 renters..."
 puts "Seeding 10 bunnies..."
 
 cannelle_image = URI.open("https://images.unsplash.com/photo-1517750199383-5442eaf9e041?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
-cannelle = Bunny.new(name: 'cannelle', description: 'cannelle aime le calme et les caresses. Elle n\'est pas compatible avec les chiens.', address: '7 Rue Marie Anne du Boccage Nantes', price_per_day: 15, fur: 'moelleux', skill: 'relaxant', weight: 'léger', size: 'moyen', cleanliness: 4)
+cannelle = Bunny.new(name: 'Cannelle', description: 'cannelle aime le calme et les caresses. Elle n\'est pas compatible avec les chiens.', address: '7 Rue Marie Anne du Boccage Nantes', price_per_day: 15, fur: 'moelleux', skill: 'calming', weight: 'léger', size: 'moyen', cleanliness: 4)
 cannelle.photo.attach(io: cannelle_image, filename: "#{cannelle.name.downcase}.jpg", content_type: 'image/jpg')
 cannelle.user = melanie #owner
 cannelle.save!
 
 vanille_image = URI.open("https://images.reference.com/amg-cms-reference-images/prod/how-does-a-rabbit-move_5bb324e2-3f6a-4708-97ce-493e1816f510.jpg?width=760&height=411&fit=crop")
-vanille = Bunny.new(name: 'Vanille', description: 'Vanille est une lapine sportive. Elle aime les parcours d\'obstacles.', address: "3 Avenue d'Amboise Saint-Herblain", price_per_day: 17, fur: 'soft', skill: 'acrobate', weight: 'normal', size: 'petit', cleanliness: 5)
+vanille = Bunny.new(name: 'Vanille', description: 'Vanille est une lapine sportive. Elle aime les parcours d\'obstacles.', address: "3 Avenue d'Amboise Saint-Herblain", price_per_day: 17, fur: 'soft', skill: 'acrobat', weight: 'normal', size: 'petit', cleanliness: 5)
 vanille.photo.attach(io: vanille_image, filename: "#{vanille.name.downcase}.jpg", content_type: 'image/jpg')
 vanille.user = melanie #owner
 vanille.save!
 
 lexie_image = URI.open("https://i.pinimg.com/originals/48/de/3c/48de3cbe7c4ec4ff9b5dce708deee158.jpg")
-lexie = Bunny.new(name: 'Lexie', description: 'Lexie aime jouer et supporte très bien la compagnie des autres animaux.', address: '26 Rue Victor Hugo Rezé', price_per_day: 17, fur: 'moelleux', skill: 'relaxant', weight: 'normal', size: 'nain', cleanliness: 4)
+lexie = Bunny.new(name: 'Lexie', description: 'Lexie aime jouer et supporte très bien la compagnie des autres animaux.', address: '26 Rue Victor Hugo Rezé', price_per_day: 17, fur: 'moelleux', skill: 'calming', weight: 'normal', size: 'nain', cleanliness: 4)
 lexie.photo.attach(io: lexie_image, filename: "#{lexie.name.downcase}.jpg", content_type: 'image/jpg')
 lexie.user = melanie #owner
 lexie.save!
 
 pistache_image = URI.open("https://media.istockphoto.com/photos/closeup-of-a-funny-rabbit-isolated-on-white-picture-id1069594594?k=6&m=1069594594&s=612x612&w=0&h=0kR2oyNKYwd1jXD6U5Ce5uzg81fHN8y50e6jUfT2BCE=")
-pistache = Bunny.new(name: 'Pistache', description: 'Pistache est un lapin qui aime faire la fête. Il est toujours partant pour aller boire un verre avec ses copains lapins', address: "32 Rue d'Anjou Nantes", price_per_day: 13, fur: 'rêche', skill: 'fêtard', weight: 'normal', size: 'moyen', cleanliness: 5)
+pistache = Bunny.new(name: 'Pistache', description: 'Pistache est un lapin qui aime faire la fête. Il est toujours partant pour aller boire un verre avec ses copains lapins', address: "32 Rue d'Anjou Nantes", price_per_day: 13, fur: 'rêche', skill: 'partygoer', weight: 'normal', size: 'moyen', cleanliness: 5)
 pistache.photo.attach(io: pistache_image, filename: "#{pistache.name.downcase}.jpg", content_type: 'image/jpg')
 pistache.user = caroline #owner
 pistache.save!
 
 arya_image = URI.open("https://squeaksandnibbles.com/wp-content/uploads/2018/02/netherland-dwarf-971x1024.jpg")
-arya = Bunny.new(name: 'Arya', description: 'Arya est très peureuse. Elle aime beacoup les calins.', address: '18 Rue des Perce-Neige Saint-Sebastien-Sur-Loire', price_per_day: 14, fur: 'doux', skill: 'câlin', weight: 'léger', size: 'nain', cleanliness: 3)
+arya = Bunny.new(name: 'Arya', description: 'Arya est très peureuse. Elle aime beacoup les calins.', address: '18 Rue des Perce-Neige Saint-Sebastien-Sur-Loire', price_per_day: 14, fur: 'doux', skill: 'cuddly', weight: 'léger', size: 'nain', cleanliness: 3)
 arya.photo.attach(io: arya_image, filename: "#{arya.name.downcase}.jpg", content_type: 'image/jpg')
 arya.user = mathieu #owner
 arya.save!
 
 choco_image = URI.open("https://images.unsplash.com/photo-1533993962330-7e4e1e64b2e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80")
-choco = Bunny.new(name: 'Choco', description: 'Choco est un lapin qui aime plaire, il saura vous faire un charme.', address: '28 Rue Maurice Utrillo Rezé', price_per_day: 16, fur: 'doux', skill: 'reproducteur', weight: 'lourd', size: 'large', cleanliness: 2)
+choco = Bunny.new(name: 'Choco', description: 'Choco est un lapin qui aime plaire, il saura vous faire un charme.', address: '28 Rue Maurice Utrillo Rezé', price_per_day: 16, fur: 'doux', skill: 'breeding', weight: 'lourd', size: 'large', cleanliness: 2)
 choco.photo.attach(io: choco_image, filename: "#{choco.name.downcase}.jpg", content_type: 'image/jpg')
 choco.user = mathieu #owner
 choco.save!
@@ -124,13 +124,13 @@ lulu.user = brigitte #owner
 lulu.save!
 
 paris_image = URI.open("https://images.unsplash.com/photo-1546555670-f68f7302f3a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80")
-paris = Bunny.new(name: 'Paris', description: 'Paris est un lapin voyageur, il vous accompagnera avec plaisir pendant vos vacances.', address: '84 Rue du Douet Saint-Sebastien-Sur-Loire', price_per_day: 16, fur: 'doux', skill: 'relaxant', weight: 'normal', size: 'moyen', cleanliness: 3)
+paris = Bunny.new(name: 'Paris', description: 'Paris est un lapin voyageur, il vous accompagnera avec plaisir pendant vos vacances.', address: '84 Rue du Douet Saint-Sebastien-Sur-Loire', price_per_day: 16, fur: 'doux', skill: 'calming', weight: 'normal', size: 'moyen', cleanliness: 3)
 paris.photo.attach(io: paris_image, filename: "#{paris.name.downcase}.jpg", content_type: 'image/jpg')
 paris.user = arthur #owner
 paris.save!
 
 couscous_image = URI.open("https://images.unsplash.com/photo-1452857297128-d9c29adba80b?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80")
-couscous = Bunny.new(name: 'Couscous', description: 'Couscous aime manger et faire des câlins.', address: '14 Rue Jeanne la Corsaire Nantes', price_per_day: 16 , fur: 'moelleux', skill: 'câlin', weight: 'lourd', size: 'grand', cleanliness: 4)
+couscous = Bunny.new(name: 'Couscous', description: 'Couscous aime manger et faire des câlins.', address: '14 Rue Jeanne la Corsaire Nantes', price_per_day: 16 , fur: 'moelleux', skill: 'cuddly', weight: 'lourd', size: 'grand', cleanliness: 4)
 couscous.photo.attach(io: couscous_image, filename: "#{couscous.name.downcase}.jpg", content_type: 'image/jpg')
 couscous.user = caroline #owner
 couscous.save!
