@@ -8,7 +8,7 @@
     <div class="description-bunny-container">
       <h1 id='bunny-name'><%= @bunny.name.capitalize %></h1>
       <div>
-        <p id="price-per-day"><em><%= @bunny.price_per_day %> €/jour</em></p>
+        <p id="price-per-day" data-price="<%= @bunny.price_per_day %>"><em><%= @bunny.price_per_day %> €/jour</em></p>
       </div>
       <p><%= @bunny.description.capitalize %></p>
       <div>
