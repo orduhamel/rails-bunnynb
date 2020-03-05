@@ -36,18 +36,17 @@
 }
 
 .liste-caracteristiques-bunny {
-  margin-top: 50px;
   font-size: 20px;
-  border-top: 1px solid $light-gray;
   padding-top: 30px;
   padding-bottom: 30px;
+  border-bottom: 1px solid $light-gray;
+  border-top: 1px solid $light-gray;
 }
 
 .liste-caracteristiques-bunny ul li {
   list-style: none;
   padding-top: 5px;
   padding-bottom: 5px;
-
 }
 
 .b-picture {
@@ -90,3 +89,7 @@
 // .btn-outline-secondary {
 //   color: black !important;
 // }
+
+.booking-new {
+  width: 100%;
+}
