@@ -1,8 +1,48 @@
 
-<h1>Les réservations de vos lapins</h1>
-
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-10 offset-md-1">
+      <h1 class="principal-title-booking">Les réservations de vos Lapins</h1>
+    </div>
+  </div>
+</div>
 <% @bunnies.each do |bunny| %>
+  <h2><%= bunny.name %></h2>
   <% bunny.bookings.each do |booking| %>
-    <%= booking.status %>
-  <% end %>
+    <div class="container wrapper-bookings">
+      <div class="row">
+        <div class="col-sm-10 offset-md-1">
+          <div class="card-product">
+            <%= cl_image_tag booking.bunny.photo.key %>
+            <div class="card-product-infos card-product-owner">
+              <div class="container-name-price-status">
+                <div class="status-booking <%= booking.status %> owner-status"> <%= t(booking.status) %>
+                </div>
+                  <div class="confirmation-status pl-4">
+                    <p class="ask-confirm"> Confirmer :</p>
+                    <i class="far fa-check-circle confirm-circle"></i>
+                    <i class="far fa-times-circle no-circle"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="container-date-booking d-flex justify-content-between pl-4" >
+                    <p class="booking-date mr-5"> <%= l(booking.start_date, format: '%d %B') %> - <%= l(booking.end_date, format:'%d %B')%> </p>
+                    <p class="booking-date mr-5"><%=booking.total_price%>€</p>
+                  </div>
+                </div>
+                <div class="info-owner">
+                  <div class="container-photo-owner">
+                    <p><%= cl_image_tag booking.user.photo.key, class: "photo-owner"%></p>
+                  </div>
+                  <div class="owner-name">
+                    <p><%=booking.user.first_name%> <%=booking.user.last_name%></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+<% end %>
 <% end %>
