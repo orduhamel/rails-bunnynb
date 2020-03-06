@@ -12,12 +12,6 @@
 
 }
 
-.card-product img {
-  height: 100%;
-  width: 200px;
-  object-fit: cover;
-}
-
 .card-product h2 {
   font-size: 18px;
 }
@@ -71,6 +65,7 @@ padding-left: 70px;
   border-radius: 50%;
   height: 70px !important;
   width: 70px !important;
+  object-fit: cover;
 }
 
 .owner-name {
