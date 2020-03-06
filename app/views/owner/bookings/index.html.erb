@@ -13,7 +13,7 @@
         <div class="col-sm-10 offset-md-1">
           <h2><%= bunny.name %></h2>
           <div class="card-product">
-            <%= cl_image_tag booking.bunny.photo.key %>
+            <%= cl_image_tag booking.bunny.photo.key, crop: :fill, width: 200%>
             <div class="card-product-infos card-product-owner">
               <div class="container-name-price-status">
                 <div class="status-booking <%= booking.status %> owner-status"> <%= t(booking.status) %>
