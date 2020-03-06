@@ -26,3 +26,13 @@ height: 100%;
 .owner-status {
   margin-bottom: 10px;
 }
+.default-picture-booking {
+  background-image: asset-url('mohan-default.jpg');
+  background-size: cover;
+  height: 600px;
+}
+.default-picture-booking h2 {
+  color: white;
+  margin-left: 100px;
+  font-weight: normal;
+}
