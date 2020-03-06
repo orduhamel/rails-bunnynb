@@ -26,4 +26,28 @@ class Bunny < ApplicationRecord
   def light_shower
     5 - cleanliness
   end
+
+  def self.fur_collection
+    FURS.map do |fur|
+      [I18n.t(fur), fur]
+    end
+  end
+
+  def self.size_collection
+    SIZES.map do |size|
+      [I18n.t(size), size]
+    end
+  end
+
+  def self.weight_collection
+    WEIGHTS.map do |weight|
+      [I18n.t(weight), weight]
+    end
+  end
+
+  def self.skill_collection
+    SKILLS.map do |skill|
+      [I18n.t(skill), skill]
+    end
+  end
 end
