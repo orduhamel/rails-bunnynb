@@ -7,11 +7,11 @@
   </div>
 </div>
 <% @bunnies.each do |bunny| %>
-  <h2><%= bunny.name %></h2>
   <% bunny.bookings.each do |booking| %>
-    <div class="container wrapper-bookings">
+    <div class="container wrapper-bookings col-sm-10 offset-md-1">
       <div class="row">
         <div class="col-sm-10 offset-md-1">
+          <h2><%= bunny.name %></h2>
           <div class="card-product">
             <%= cl_image_tag booking.bunny.photo.key %>
             <div class="card-product-infos card-product-owner">
@@ -20,8 +20,12 @@
                 </div>
                   <div class="confirmation-status pl-4">
                     <p class="ask-confirm"> Confirmer :</p>
-                    <i class="far fa-check-circle confirm-circle"></i>
+                    <%= link_to confirm_owner_booking_path(booking), method: :patch do %>
+                      <i class="far fa-check-circle confirm-circle"></i>
+                    <% end %>
+                    <%= link_to refuse_owner_booking_path(booking), method: :patch do %>
                     <i class="far fa-times-circle no-circle"></i>
+                    <% end %>
                   </div>
                 </div>
                 <div>
