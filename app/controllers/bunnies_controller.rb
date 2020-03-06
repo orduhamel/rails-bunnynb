@@ -21,19 +21,19 @@ class BunniesController < ApplicationController
     @bunny = Bunny.new
   end
 
-  # def create
-  #   @bunny = Bunny.new(bunny_params)
-  #   @bunny.user = current_user
-  #   if @bunny.save
-  #     redirect_to owner_bunnies_path
-  #   else
-  #     render :new
-  #   end
-  # end
+  def create
+    @bunny = Bunny.new(bunny_params)
+    @bunny.user = current_user
+    if @bunny.save
+      redirect_to owner_bunnies_path
+    else
+      render :new
+    end
+  end
 
   private
 
   def bunny_params
-  params.require(:bunny).permit(:name, :description, :address, :fur, :size, :weight, :skill, :cleanliness, :photo)
+  params.require(:bunny).permit(:name, :description, :price_per_day, :address, :fur, :size, :weight, :skill, :cleanliness, :photo)
   end
 end
