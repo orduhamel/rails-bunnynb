@@ -35,6 +35,18 @@ en:
   partygoer: "Fêtard"
   calming: "Relaxant"
   acrobat: "Acrobate"
+  rough: "Rêche"
+  soft: "Doux"
+  fluffy: "Moelleux"
+  dwarf: "Nain"
+  small: "Petit"
+  medium: "Moyen"
+  large: "Grand"
+  giant: "Géant"
+  light: "Léger"
+  normal: "Normal"
+  heavy: "Lourd"
+  enormous: "Enorme"
 
 en:
   pending: "En attente"
