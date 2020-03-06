@@ -4,11 +4,11 @@
     <h1 id='owner-bunnies-title'>Mes lapins</h1>
   </div>
 
-<div class='wrap-container'>
   <% if @bunnies.empty? %>
-    <div class="default-picture-booking d-flex align-items-center">
+    <div class="container default-picture-booking d-flex align-items-center">
       <h2>Vos n'avez pas encore de lapin</h2>
     </div>
+  <div class='wrap-container'>
   <% else %>
     <div class='main-bunny d-flex justify-content-center'>
       <% @bunnies.each do |bunny| %>
