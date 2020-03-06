@@ -8,10 +8,6 @@
   margin-bottom: 30px;
 }
 
-.principal-title-booking {
-
-}
-
 .card-product h2 {
   font-size: 18px;
 }
@@ -110,3 +106,18 @@ margin-bottom: 20px;
 margin-top: 10px;
 margin-left: 15px;
 }
+
+.default-picture-booking {
+  background-image: asset-url('mohan-default.jpg');
+  background-size: cover;
+  height: 600px;
+}
+.default-picture-booking h2 {
+  color: white;
+  margin-left: 100px;
+  font-weight: normal;
+}
+
+
+
+
