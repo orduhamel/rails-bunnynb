@@ -17,12 +17,23 @@ class BunniesController < ApplicationController
     @booking = Booking.new
   end
 
-  def create
+  def new
+    @bunny = Bunny.new
   end
+
+  # def create
+  #   @bunny = Bunny.new(bunny_params)
+  #   @bunny.user = current_user
+  #   if @bunny.save
+  #     redirect_to owner_bunnies_path
+  #   else
+  #     render :new
+  #   end
+  # end
 
   private
 
-  def article_params
-  params.require(:bunny).permit(:name, :description, :fur, :size, :weight, :skill, :cleanliness, :photo)
+  def bunny_params
+  params.require(:bunny).permit(:name, :description, :address, :fur, :size, :weight, :skill, :cleanliness, :photo)
   end
 end

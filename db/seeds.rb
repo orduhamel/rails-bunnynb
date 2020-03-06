@@ -82,7 +82,7 @@ cannelle.user = melanie #owner
 cannelle.save!
 
 vanille_image = URI.open("https://images.reference.com/amg-cms-reference-images/prod/how-does-a-rabbit-move_5bb324e2-3f6a-4708-97ce-493e1816f510.jpg?width=760&height=411&fit=crop")
-vanille = Bunny.new(name: 'Vanille', description: 'Vanille est une lapine sportive. Elle aime les parcours d\'obstacles.', address: "3 Avenue d'Amboise Saint-Herblain", price_per_day: 17, fur: 'soft', skill: 'acrobat', weight: 'normal', size: 'petit', cleanliness: 5)
+vanille = Bunny.new(name: 'Vanille', description: 'Vanille est une lapine sportive. Elle aime les parcours d\'obstacles.', address: "3 Avenue d'Amboise Saint-Herblain", price_per_day: 17, fur: 'doux', skill: 'acrobat', weight: 'normal', size: 'petit', cleanliness: 5)
 vanille.photo.attach(io: vanille_image, filename: "#{vanille.name.downcase}.jpg", content_type: 'image/jpg')
 vanille.user = melanie #owner
 vanille.save!
@@ -130,7 +130,7 @@ paris.user = arthur #owner
 paris.save!
 
 couscous_image = URI.open("https://images.unsplash.com/photo-1452857297128-d9c29adba80b?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80")
-couscous = Bunny.new(name: 'Couscous', description: 'Couscous aime manger et faire des câlins.', address: '14 Rue Jeanne la Corsaire Nantes', price_per_day: 16 , fur: 'moelleux', skill: 'cuddly', weight: 'lourd', size: 'grand', cleanliness: 4)
+couscous = Bunny.new(name: 'Couscous', description: 'Couscous aime manger et faire des câlins.', address: '14 Rue Jeanne la Corsaire Nantes', price_per_day: 16 , fur: 'moelleux', skill: 'câlin', weight: 'lourd', size: 'grand', cleanliness: 4)
 couscous.photo.attach(io: couscous_image, filename: "#{couscous.name.downcase}.jpg", content_type: 'image/jpg')
 couscous.user = caroline #owner
 couscous.save!

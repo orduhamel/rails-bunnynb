@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row justify-content-center px-4 py-4">
+    <h1>Ajouter votre lapin</h1>
+  </div>
+  <div class="row justify-content-center px-4 py-4 mb-5">
+    <div class="form-label-group">
+      <%= simple_form_for @bunny do |f| %>
+        <%= f.input :name, as: :string, label: 'Nom du lapin', placeholder: 'Entrez le nom de votre lapin' %>
+        <%= f.input :address, as: :string, label: 'Adresse', placeholder: 'Entrez votre adresse' %>
+        <%= f.input :description, as: :text, label: 'Description', placeholder: 'Décrivez votre lapin en quelques phrases' %>
+        <%= f.input :price_per_day, as: :integer, label: 'Prix/jour(€)', placeholder: 'Entrez le prix journalier de location' %>
+        <%= f.input :fur, as: :radio_buttons, collection: Bunny::FURS, label: 'Pelage', wrapper: :vertical_collection_inline  %>
+        <%= f.input :skill, as: :radio_buttons, collection: Bunny::SKILLS, label: 'Compétence clé', wrapper: :vertical_collection_inline %>
+        <%= f.input :size, as: :radio_buttons, collection: Bunny::SIZES, label: 'Taille', wrapper: :vertical_collection_inline %>
+        <%= f.input :weight, as: :radio_buttons, collection: Bunny::WEIGHTS, label: 'Poids', wrapper: :vertical_collection_inline %>
+        <%= f.input :cleanliness, as: :integer, label: 'Niveau de propreté', placeholder: 'Indiquer un chiffre entre 0 et 5' %>
+        <%= f.input :photo, as: :file %>
+        <div class="row justify-content-center my-4">
+          <%= f.submit "Ajouter ce lapin", class: 'bunny-btn px-4' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
