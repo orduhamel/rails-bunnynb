@@ -11,3 +11,10 @@ a {
 a:hover {
   text-decoration: none;
 }
+body {
+  min-height: 100vh;
+  position: relative;
+}
+#espace-pour-footer {
+  height: 150px;
+}

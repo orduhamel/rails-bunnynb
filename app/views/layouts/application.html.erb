@@ -13,6 +13,8 @@
     <%= render partial: '/shared/navbar' if user_session_path %>  <!-- skip sign in -->
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <div id="espace-pour-footer"></div>
+    <%= render partial: 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
 
     <%= javascript_pack_tag 'application' %>
