@@ -24,7 +24,7 @@
               <%= link_to "Mes réservations", "/bookings", class: "dropdown-item" %>
               <%= link_to "Mes lapins", "/owner/bunnies", class: "dropdown-item" %>
               <%= link_to "Mes annonces", "/owner/bookings", class: "dropdown-item" %>
-              <%= link_to "Se déconnecter", "/users/sign_out", class: "dropdown-item" %>
+              <%= link_to "Se déconnecter", "/users/sign_out", method: :delete, class: "dropdown-item" %>
             </div>
           </li>
         <% else %>
