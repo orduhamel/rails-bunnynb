@@ -6,19 +6,40 @@
 
 <div class='wrap-container'>
 
-  <div class='main-bunny d-flex justify-content-around'>
+  <div class='main-bunny d-flex justify-content-center'>
     <% @bunnies.each do |bunny| %>
-      <div class="card-bunny m-2" style="width: 18rem;">
+      <div class="card-bunny-owner m-3 position-relative" style="width: 18rem;">
         <div class="card-body-bunny">
           <%= cl_image_tag bunny.photo.key, class: "bunny-picture" %>
           <h2 class="card-title-bunny"><%= bunny.name %></h2>
             <p class="card-text-bunny <%= bunny.skill %>"><%= t(bunny.skill) %></p>
             <p id="bunny-price"><%= bunny.price_per_day %>€</p>
-            <div>
-
+            <p id="description-bunny-owner"><%= bunny.description %></p>
+            <div class="liste-caracteristiques-owner-bunny position-absolute">
+              <ul>
+                <li>
+                  <i class="fas fa-arrows-alt-h"></i> <strong><%= bunny.size.capitalize %></strong>
+                </li>
+                <li>
+                 <i class="fas fa-weight"></i> <strong><%= bunny.weight.capitalize %></strong>
+                </li>
+                <li>
+                  <i class="fas fa-feather-alt"></i> <strong><%= bunny.fur.capitalize %></strong>
+                </li>
+                <li>
+                  <% bunny.cleanliness.times do  %>
+                    <i class="fas fa-shower"></i></i>
+                  <% end %>
+                  <% bunny.light_shower.times do %>
+                    <span id="light-shower"><i class="fas fa-shower"></i></span>
+                  <% end %>
+                </li>
+              </ul>
             </div>
+
         </div>
       </div>
     <% end %>
   </div>
+
 </div>
