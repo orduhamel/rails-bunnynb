@@ -52,3 +52,13 @@ fr:
   enormous: "Enorme"
   boxer: "Boxeur"
 
+
+  activerecord:
+    attributes:
+      bunny:
+        fur:
+          rough: "Rêche"
+          soft: "Doux"
+          fluffy: "Moelleux"
+
+
