@@ -5,17 +5,30 @@
   </div>
 
 <div class='wrap-container'>
-
-  <div class='main-bunny d-flex justify-content-center'>
-    <% @bunnies.each do |bunny| %>
-      <div class="card-bunny-owner m-3 position-relative" style="width: 18rem;">
-        <div class="card-body-bunny">
-          <%= cl_image_tag bunny.photo.key, class: "bunny-picture" %>
-          <h2 class="card-title-bunny"><%= bunny.name %></h2>
+  <% if @bunnies.empty? %>
+    <div class="default-picture-booking d-flex align-items-center">
+      <h2>Vos n'avez pas encore de lapin</h2>
+    </div>
+  <% else %>
+    <div class='main-bunny d-flex justify-content-center'>
+      <% @bunnies.each do |bunny| %>
+        <div class="card-bunny-owner m-3" style="width: 18rem;">
+          <div class="card-body-bunny">
+            <%= cl_image_tag bunny.photo.key, class: "bunny-picture" %>
+            <h2 class="card-title-bunny"><%= bunny.name %></h2>
+            <div class="total-bunny-bookings">
+              <% if bunny.bookings.count > 1 %>
+                <p><strong><%= bunny.bookings.count %></strong> réservations</p>
+              <% elsif bunny.bookings.count == 1 %>
+                <p><strong><%= bunny.bookings.count %></strong> réservation</p>
+              <% else %>
+              <p><strong>0</strong> réservation</p>
+              <% end %>
+            </div>
+            <hr>
             <p class="card-text-bunny <%= bunny.skill %>"><%= t(bunny.skill) %></p>
             <p id="bunny-price"><%= bunny.price_per_day %>€</p>
-            <p id="description-bunny-owner"><%= bunny.description %></p>
-            <div class="liste-caracteristiques-owner-bunny position-absolute">
+            <div class="liste-caracteristiques-owner-bunny">
               <ul>
                 <li>
                   <i class="fas fa-arrows-alt-h"></i> <strong><%= bunny.size.capitalize %></strong>
@@ -35,11 +48,11 @@
                   <% end %>
                 </li>
               </ul>
+            <p id="description-bunny-owner"><%= bunny.description %></p>
             </div>
-
+          </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-
+      <% end %>
+    </div>
+  <% end %>
 </div>
