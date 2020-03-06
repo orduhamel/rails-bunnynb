@@ -7,18 +7,18 @@ class Bunny < ApplicationRecord
   validates :price_per_day, numericality: true
 
   FURS = %w(rough soft fluffy)
-  validates :fur, inclusion: { in: FURS }
+  # validates :fur, inclusion: { in: FURS }
 
   SIZES = %w(dwarf small medium large giant)
-  validates :size, inclusion: { in: SIZES }
+  # validates :size, inclusion: { in: SIZES }
 
   WEIGHTS = %w(light normal heavy enormous)
-  validates :weight, inclusion: { in: WEIGHTS }
+  # validates :weight, inclusion: { in: WEIGHTS }
 
   SKILLS = %w(cuddly breeding partygoer calming acrobat boxer)
-  validates :skill, inclusion: { in: SKILLS }
+  # validates :skill, inclusion: { in: SKILLS }
 
-  validates :cleanliness, inclusion: { in: (0..5) }
+  # validates :cleanliness, inclusion: { in: (0..5) }
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
