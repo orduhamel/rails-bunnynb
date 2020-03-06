@@ -9,8 +9,8 @@
       } do |f| %>
         <%= f.input :start_date, as: :date, html5: true, placeholder: 'Date de début', as: :string, required: false, input_html: { id: "range_start" } %>
         <%= f.input :end_date, as: :date, html5: true, placeholder: 'Date de fin', as: :string, required: false, input_html: { id: "range_end" } %>
-        <span id="total-price"></span><span id="total-price-euros">€</span>
-        <%= f.submit 'Réserver', class: 'bunny-btn px-4' %>
+        <p id="word-total">Total</p><span id="total-price"></span><span id="total-price-euros">€</span>
+        <%= f.submit 'Réserver', class: 'bunny-btn px-4 ml-5 mr-0' %>
     <% end %>
   </div>
 </div>

@@ -13,7 +13,7 @@ class Bunny < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  def blank_poop
+  def light_shower
     5 - cleanliness
   end
 end
