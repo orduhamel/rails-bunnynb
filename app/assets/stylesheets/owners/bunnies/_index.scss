@@ -1,5 +1,33 @@
 #owner-bunnies-title {
-  margin-left: 110px;
+  margin-left: 310px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.liste-caracteristiques-owner-bunny {
+  font-size: 15px;
+  padding-top: 0px;
+  padding-bottom: 30px;
+  margin-left: 20px;
+}
+
+.liste-caracteristiques-owner-bunny ul li {
+  list-style: none;
+}
+
+.card-bunny-owner {
+  border-radius: 5px;
+  padding-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);;
+  height: 460px;
+}
+
+#description-bunny-owner {
+  margin-left: 15px;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+
+.position-absolute {
+  top: 340px;
 }
