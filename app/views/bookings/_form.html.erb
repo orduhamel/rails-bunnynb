@@ -1,5 +1,10 @@
 <div class="booking-new">
-  <h2>Réserver ce lapin</h2>
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Réserver ce lapin</h2>
+    <div class="price-total d-flex align-items-center">
+      <p id="word-total">Total:</p><span id="total-price"></span><span id="total-price-euros">€</span>
+    </div>
+  </div>
   <div class="form booking-form">
     <%= simple_form_for [bunny, booking],
       wrapper: :inline_form,
@@ -9,7 +14,6 @@
       } do |f| %>
         <%= f.input :start_date, as: :date, html5: true, placeholder: 'Date de début', as: :string, required: false, input_html: { id: "range_start" } %>
         <%= f.input :end_date, as: :date, html5: true, placeholder: 'Date de fin', as: :string, required: false, input_html: { id: "range_end" } %>
-        <p id="word-total">Total</p><span id="total-price"></span><span id="total-price-euros">€</span>
         <%= f.submit 'Réserver', class: 'bunny-btn px-4 ml-5 mr-0' %>
     <% end %>
   </div>

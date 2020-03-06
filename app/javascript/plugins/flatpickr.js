@@ -21,4 +21,3 @@ flatpickr("#range_start", {
   }
 });
 
-
